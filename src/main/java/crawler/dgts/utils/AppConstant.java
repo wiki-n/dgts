@@ -1,0 +1,1797 @@
+package crawler.dgts.utils;
+
+import java.text.SimpleDateFormat;
+
+public class AppConstant {
+	public static final String TIMESTAMP_FORMAT = "yyyy-MM-dd HH:mm:ss";
+	public static final String DATE_FORMAT = "yyyy-MM-dd";
+	public static final String DATE_FORMAT2 = "dd/MM/yyyy";
+	public static final String MONTH_FORMAT = "yyyy-MM";
+	public static final String PORFOLIO_MONTH_FORMAT = "MM-yyyy";
+	public static final String MONTH_FORMAT_2 = "MM/yyyy";
+	public static final String MONTH_FORMAT_3 = "MM-yyyy";
+	
+	public static final SimpleDateFormat SIMPLE_TIMESTAMP_FORMAT = new SimpleDateFormat(TIMESTAMP_FORMAT);
+	public static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT);
+	public static final SimpleDateFormat SIMPLE_DATE_FORMAT2 = new SimpleDateFormat(DATE_FORMAT2);
+	public static final SimpleDateFormat SIMPLE_MONTH_FORMAT = new SimpleDateFormat(MONTH_FORMAT);
+	public static final SimpleDateFormat SIMPLE_MONTH_FORMAT_2 = new SimpleDateFormat(MONTH_FORMAT_2);
+
+	public static final String xApiKey = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzaXRfYXV0aGVuX3NlcnZpY2UiLCJleHAiOjE1NDY5MTYwNTUsImp0aSI6IiIsImlhdCI6MTU0NjgyOTY1NSwic3ViIjoiMDAwMTEwMDE3MSIsImN1c3RvZHlJRCI6IjEwNUMxMDAxNzEiLCJlbWFpbCI6ImFidmlldGR2LmNtY0B0Y2JzLmNvbS52biIsInJvbGVzIjpbImN1c3RvbWVyIl0sInN0ZXB1cF9leHAiOjAsInNvdHBfc2lnbiI6IiJ9.QYzxqOWs_C10FQHFsjAhHg7i0GASLvYKyw2pFG7Re3auHv6s6sAjZeDsYqpUrSYUQFO5q6I9U4ipqnn27mTHyPqcgm5KYl-H7HL8sBA8r-hhGz3W9g8MkF-Gp3kEYJBCFpDWhlZEO_QbJGejw8fFLTddsJ6NIgAXWpFWtjD4BuIpGWFalJiHDN_vjXeAIld2-LimzgaJcO3hna5bUiZ9pQyEGZc4GX9vR1t_uAbKl7tDMpRbY8k9jFzHe3E8isV2TE4oDyXBpUHv6rD8d2MIP6s98vyv-Os0zLLuSVC_egh1jSxzBtaY3hBZCAuHT3wuHhx10Fz4_A5cfTjJG3o_Qw";
+	public static final String publicApiKey = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkRDTSBTZXJ2aWNlIFB1YmxpYyBBUEkiLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNTgyNjM5MDIyfQ.TNiOBhRKEv0vu4Nd7G7_rjhREa7lgL8sH5CXaOEsPyjFK_dwfgqLPEWBuM0lphhHfB1VuneYZUX0wg031YpF1g";
+	public static final String fundServiceTokenKey = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJUQ0JTIElBTSBTZXJ2aWNlIiwiZXhwIjoxNTM4Mzg1MTc3LCJqdGkiOiIiLCJpYXQiOjE1MzgzODE1NzcsInN1YiI6IjAwMDE4ODg4ODgiLCJjdXN0b2R5SUQiOiIxMDVDODg4ODg4IiwiZW1haWwiOiJuZ3V5ZW5fX3hfX21pbmhfZ21haWxfX2NvbUB0Y2JzLmNvbS52biIsInJvbGVzIjpbInJtIiwiY3VzdG9tZXIiXSwicGVybWlzc2lvbnMiOlsiYWxsIl19.mv3wKpXuQY7Nbm5ADGCIv2CHEzjYckxFEfCCPvrfeS31LHwhJvL1vE7EiaJ786QRoNZXem5Zu2Can1_m4h2h7bCXbRRi4m7TUG1jUyRk2b6z2y6bdOW4ty0xV37D-vUmsMfsSYaAjl6NS2g_VhGHbCb6ta71x7jAHjLKWgszJwqbbCfd0d5bUMcJIHI3hTZi2IjlImDBRnKB0n3y0WC88qdGpIxWTM8_IRm8UDuN038Z5laE1uLcC0D6zyePXu3D1pOhiLOdydgduA8KEqmhrbYQ9GYgBk5_77seWtfuEenhNR-hobFCLBggwQJTZgDA5LxZtG7R5tqxkl6XmD09mQ";
+	public static final String PORTFOLIO_SERVICE_TOKEN_KEY = "Bearer eyJ4NXQiOiJaalJtWVRNd05USmpPV1U1TW1Jek1qZ3pOREkzWTJJeU1tSXlZMkV6TWpkaFpqVmlNamMwWmciLCJraWQiOiJaalJtWVRNd05USmpPV1U1TW1Jek1qZ3pOREkzWTJJeU1tSXlZMkV6TWpkaFpqVmlNamMwWmdfUlMyNTYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJtYWtlciIsImF1ZCI6IkJyb0ZVbTFrZjZXdnRXSjdNaE1BSk9uZGxWY2EiLCJuYmYiOjE1OTIzNzc1ODQsImF6cCI6IkJyb0ZVbTFrZjZXdnRXSjdNaE1BSk9uZGxWY2EiLCJzY29wZSI6Im9wZW5pZCIsImlzcyI6Imh0dHBzOlwvXC93c28yaXMtc2l0LnRjYnMuY29tLnZuXC9vYXV0aDJcL3Rva2VuIiwiZ3JvdXBzIjpbIkludGVybmFsXC9ldmVyeW9uZSIsIkFwcGxpY2F0aW9uXC9GTV9BRE1JTiIsIkFwcGxpY2F0aW9uXC9BTkFUVEFfTUFLRVIiLCJBcHBsaWNhdGlvblwvQk9ORF9NQUtFUiJdLCJleHAiOjE1OTIzODExODQsImlhdCI6MTU5MjM3NzU4NCwianRpIjoiZGNjMGVlYTUtMzAxYy00N2RiLTk5YzYtM2M3NzFkZjAxMzM0In0.OIpp4OlhLIwRbCLWqxlXisp4suzswVMzAEjugrt5Hi_jCWE3BeUYFklUAthJWqwiaECo67Q1uMWmJIDXrQNFT_ggLSILJMiIue3sdFaAjITbZUe_iPTUsA5dED6efVCjSV0_8a_Fr1RvDizVNOqhcucEGEaSdMZMW-ZTSrmdCTCqm73V_AA9T0UjOPUIbO1t3m6EM0MWxBcI1xIg3b-IS3hM0JdPQuqMsoppYcpBR8aKlqzLtkQYJwmp0vOZHnC8bTQ0EX5MUherrVGJAiuIP16m8ilEvWfNS3LHGxVttnezID0n48JymdxnQbg1JKufDbR8TQzaSCwQrmzHM6R0SQ";
+	public static final String DCM_IDENTIFIER_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiAiaHR0cHM6Ly9kYXRhcG93ZXIudGNicy5jb20udm4iLCAic3ViIjogInRjYnMtZWRjbSIsICJpYXQiOiAxNjAyNjY3MDIwLCAiZXhwIjogMTkxODAyNzAyMH0.LvVoM5FPlFJ7PS_jyN6yb8mcoQMi0QwaKSAiERC_3heOal-jvjPDozi97-EMIc4tyvAwPvJVLao4sdCPDJaZAnoDKsnH8z-fHqDgDNE0DCpfxIrMRC6oISPWMLRyaa565stK67dAcj_g-wtOhtRcPWpqUC-OubSirXoF6eQ_crB_q8XLYa30C78S4f7kzDc9zklcS7lqAxI8w4je8Crh0JPZDzrXkgwoMsdPdJ5qhMuZ7_oIKJSxDRMAZvM32Tt7TlSTKJtUlpUlk21Ah9nH-GbkF57J2HYvTDSfKOkVf7EyULry2hgbj8OJZllXSEzxacjMG40b0b3x4D1QGjOPqA";
+
+	public static class ERROR_CODE {
+		private static final int BASE = 300000;
+		
+		public static final int OK = BASE + 0;
+		public static final int INTERNAL_SERVER_ERROR = BASE + 1;
+		public static final int INVALID_TOKEN = BASE + 2;
+		public static final int INVALID_USERNAME = BASE + 3;
+		public static final int INVALID_BODY = BASE + 4;
+		public static final int INVALID_PAGE_INDEX = BASE + 5;
+		public static final int INVALID_PAGE_SIZE = BASE + 6;
+		public static final int INVALID_LISTING_EXCHANGE = BASE + 7;
+
+		public static final int NOT_EXISTS_BONDID = BASE + 11;
+		public static final int NOT_EXISTS_CASEID = BASE + 12;
+		public static final int NOT_EXISTS_COMPANYID = BASE + 13;
+		public static final int NOT_EXISTS_EMPLOYEEID = BASE + 14;
+		public static final int NOT_EXISTS_CATEGORY = BASE + 15;
+		public static final int NOT_EXISTS_TERMSHET_VERSION = BASE + 16;
+		public static final int NOT_EXISTS_COMPANY_NAME = BASE + 17;
+		public static final int NOT_EXISTS_TERMSHEET_ID = BASE + 18;
+		public static final int NOT_EXISTS_TS_USER_TYPE = BASE + 19;
+		public static final int NOT_EXISTS_TS_STATUS = BASE + 20;
+		public static final int NOT_EXISTS_DOCVERSION_ID = BASE + 21;
+		public static final int NOT_EXISTS_BOND_CODE = BASE + 22;
+		public static final int NOT_EXISTS_PROJECT_ID = BASE + 23;
+
+		public static final int INVALID_BOND_DETAIL = BASE + 40;
+		public static final int INVALID_COMPANY_DETAIL = BASE + 41;
+		public static final int INVALID_COMPANY_EMPLOYEE = BASE + 42;
+		public static final int INVALID_CASE_DETAIL = BASE + 43;
+		public static final int INVALID_REFERENCE_DATA = BASE + 44;
+		public static final int INVALID_DUPLICATE_COMPANY = BASE + 45;
+
+		public static final int INVALID_BONDID = BASE + 50;
+		public static final int INVALID_CASEID = BASE + 51;
+		public static final int INVALID_COMPANYID = BASE + 52;
+		public static final int INVALID_EMPLOYEEID = BASE + 53;
+		public static final int INVALID_CATEGORY = BASE + 54;
+		public static final int INVALID_SEARCH_KEY = BASE + 55;
+		public static final int INVALID_TERMSHET_VERSION = BASE + 56;
+		public static final int INVALID_REFERECE_NAME = BASE + 57;
+		public static final int INVALID_BOND_BASE_INFO = BASE + 58;
+		public static final int INVALID_COMPANY_BASE_INFO = BASE + 59;
+		public static final int INVALID_APPLIED_CUSTOMER_TYPE = BASE + 60;
+		public static final int INVALID_DICTIONARY_ID = BASE + 61;
+		public static final int INVALID_BOND_CODE = BASE + 62;
+		public static final int INVALID_PROJECT_ID = BASE + 63;
+		public static final int INVALID_BOND_PRIMARY_DISTRIBUTION_ID = BASE + 64;
+
+		public static final int INVALID_COMPANY_BASE_INFO_COMPANYID = BASE + 100;
+		public static final int INVALID_COMPANY_BASE_INFO_NAME = BASE + 101;
+		public static final int INVALID_COMPANY_BASE_INFO_ENGNAME = BASE + 102;
+		public static final int INVALID_COMPANY_BASE_INFO_SHORTNAME = BASE + 103;
+		public static final int INVALID_COMPANY_BASE_INFO_TICKER = BASE + 104;
+
+		public static final int INVALID_COMPANY_BUSINESS_COMPANYID = BASE + 110;
+		public static final int INVALID_COMPANY_BUSINESS_BRC_NO = BASE + 111;
+		public static final int INVALID_COMPANY_BUSINESS_BRC_INITIAL_DATE = BASE + 112;
+		public static final int INVALID_COMPANY_BUSINESS_BRC_ISSUED_BY = BASE + 113;
+		public static final int INVALID_COMPANY_BUSINESS_BRC_LATEST_UPDATE = BASE + 114;
+		public static final int INVALID_COMPANY_BUSINESS_BRC_LATEST_UPDATE_DATE = BASE + 115;
+		public static final int INVALID_COMPANY_BUSINESS_CHARTERED_CAPITAL = BASE + 116;
+		public static final int INVALID_COMPANY_BUSINESS_BRC_SECTOR = BASE + 117;
+		public static final int INVALID_COMPANY_BUSINESS_PHONE = BASE + 118;
+		public static final int INVALID_COMPANY_BUSINESS_FAX = BASE + 119;
+		public static final int INVALID_COMPANY_BUSINESS_ADDRESS = BASE + 120;
+		public static final int INVALID_COMPANY_BUSINESS_EMAIL = BASE + 121;
+		public static final int INVALID_COMPANY_BUSINESS_WEBSITE = BASE + 122;
+
+		public static final int INVALID_COMPANY_EMPLOYEE_ID = BASE + 125;
+		public static final int INVALID_COMPANY_EMPLOYEE_NAME = BASE + 126;
+		public static final int INVALID_COMPANY_EMPLOYEE_EMAIL = BASE + 127;
+		public static final int INVALID_COMPANY_EMPLOYEE_COMPANYID = BASE + 128;
+		public static final int INVALID_COMPANY_EMPLOYEE_TITLE = BASE + 129;
+		public static final int INVALID_COMPANY_EMPLOYEE_DEPARTMENT = BASE + 130;
+		public static final int INVALID_COMPANY_EMPLOYEE_MOBILE = BASE + 131;
+		public static final int INVALID_COMPANY_EMPLOYEE_EXT = BASE + 132;
+		public static final int INVALID_COMPANY_EMPLOYEE_IDENTIFIER = BASE + 133;
+		public static final int INVALID_COMPANY_EMPLOYEE_IS_LEGAL_REP = BASE + 134;
+		public static final int INVALID_COMPANY_EMPLOYEE_DESC = BASE + 135;
+		public static final int INVALID_COMPANY_EMPLOYEE_BIRTHPLACE = BASE + 136;
+		public static final int INVALID_COMPANY_EMPLOYEE_ADDRESS = BASE + 137;
+		public static final int INVALID_COMPANY_EMPLOYEE_NATIONALITY = BASE + 138;
+		public static final int INVALID_COMPANY_EMPLOYEE_BACKGROUND = BASE + 139;
+		public static final int INVALID_COMPANY_EMPLOYEE_GENDER = BASE + 140;
+		public static final int INVALID_COMPANY_EMPLOYEE_EDUCATION = BASE + 141;
+		public static final int INVALID_COMPANY_EMPLOYEE_SHARE_PERCENT = BASE + 142;
+		public static final int INVALID_COMPANY_EMPLOYEE_SHARE_IN_OTHER = BASE + 143;
+		public static final int INVALID_COMPANY_EMPLOYEE_SHARE_OF_OTHER = BASE + 144;
+		public static final int INVALID_COMPANY_EMPLOYEE_SHARE_OF_SPOUSES = BASE + 145;
+		public static final int INVALID_COMPANY_EMPLOYEE_CONFLICT = BASE + 146;
+		public static final int INVALID_COMPANY_EMPLOYEE_ILLEGAL = BASE + 147;
+		public static final int INVALID_COMPANY_EMPLOYEE_DEBT = BASE + 148;
+		public static final int INVALID_COMPANY_EMPLOYEE_BENEFIT = BASE + 149;
+		public static final int INVALID_COMPANY_EMPLOYEE_OTHER_BENEFIT = BASE + 150;
+		public static final int INVALID_COMPANY_EMPLOYEE_BIRTHDAY = BASE + 151;
+
+		public static final int INVALID_COMPANY_MANAGEMENT_COMPANYID = BASE + 155;
+		public static final int INVALID_COMPANY_MANAGEMENT_REGION = BASE + 156;
+		public static final int INVALID_COMPANY_MANAGEMENT_SEGMENT = BASE + 157;
+		public static final int INVALID_COMPANY_MANAGEMENT_SECTOR_L1 = BASE + 158;
+		public static final int INVALID_COMPANY_MANAGEMENT_SECTOR_L2 = BASE + 159;
+		public static final int INVALID_COMPANY_MANAGEMENT_PIC_SENIOR = BASE + 160;
+		public static final int INVALID_COMPANY_MANAGEMENT_PIC_DCM = BASE + 161;
+		public static final int INVALID_COMPANY_MANAGEMENT_PIC_ANALYST = BASE + 162;
+		public static final int INVALID_COMPANY_MANAGEMENT_CST_REP_IB = BASE + 163;
+		public static final int INVALID_COMPANY_MANAGEMENT_TCB_RM = BASE + 164;
+		public static final int INVALID_COMPANY_MANAGEMENT_COMPANY_GROUP_TYPE = BASE + 165;
+		public static final int INVALID_COMPANY_MANAGEMENT_COMPANY_PARENT = BASE + 166;
+		public static final int INVALID_COMPANY_MANAGEMENT_PARENT_OWNERSHIP_RATE = BASE + 167;
+		public static final int INVALID_COMPANY_MANAGEMENT_FI_SALE = BASE + 168;
+
+		public static final int INVALID_COMPANY_PARENT_NULL = BASE + 170;
+		public static final int INVALID_COMPANY_PARENT_CHILDID = BASE + 171;
+		public static final int INVALID_COMPANY_PARENT_PARENTID = BASE + 172;
+
+		public static final int INVALID_COMPANY_PARNTERSHIP_NULL = BASE + 175;
+		public static final int INVALID_COMPANY_PARNTERSHIP_COMPANYID = BASE + 176;
+		public static final int INVALID_COMPANY_PARNTERSHIP_PARNTERSHIPID = BASE + 177;
+
+		public static final int INVALID_COMPANY_ACCOUNT_ID = BASE + 180;
+		public static final int INVALID_COMPANY_ACCOUNT_COMPANYID = BASE + 181;
+		public static final int INVALID_COMPANY_ACCOUNT_ACCOUNTTYPE = BASE + 182;
+		public static final int INVALID_COMPANY_ACCOUNT_ACCOUNTNUMBER = BASE + 183;
+		public static final int INVALID_COMPANY_ACCOUNT_NAME = BASE + 184;
+		public static final int INVALID_COMPANY_ACCOUNT_BRANCH = BASE + 185;
+		public static final int INVALID_COMPANY_ACCOUNT_CODE = BASE + 186;
+		public static final int INVALID_COMPANY_ACCOUNT_PROVINCE = BASE + 187;
+
+		public static final int INVALID_COMPANY_TAX_CODE_TAX_CODE = BASE + 190;
+		public static final int INVALID_COMPANY_TAX_CODE_BRC_ISSUED_BY = BASE + 191;
+		public static final int INVALID_COMPANY_TAX_CODE_BRC_INITIAL_DATE = BASE + 192;
+
+		public static final int INVALID_BOND_BASE_INFO_BOND_ID = BASE + 200;
+		public static final int INVALID_BOND_BASE_INFO_CASE_ID = BASE + 201;
+		public static final int INVALID_BOND_BASE_INFO_BOND_NAME = BASE + 202;
+		public static final int INVALID_BOND_BASE_INFO_BOND_CODE = BASE + 203;
+		public static final int INVALID_BOND_BASE_INFO_DESCRIPTION = BASE + 204;
+		public static final int INVALID_BOND_BASE_INFO_QUANTITY = BASE + 205;
+		public static final int INVALID_BOND_BASE_INFO_PAR_VALUE = BASE + 206;
+		public static final int INVALID_BOND_BASE_INFO_CURRENCY_TYPE = BASE + 207;
+		public static final int INVALID_BOND_BASE_INFO_ISSUE_DATE = BASE + 208;
+		public static final int INVALID_BOND_BASE_INFO_MATURITY_DATE = BASE + 209;
+		public static final int INVALID_BOND_BASE_INFO_BOND_STATUS = BASE + 210;
+		public static final int INVALID_BOND_BASE_INFO_BOND_PARENT_ID = BASE + 211;
+		public static final int INVALID_BOND_BASE_INFO_TENOR_YEAR = BASE + 212;
+		public static final int INVALID_BOND_BASE_INFO_TENOR_MONTH = BASE + 213;
+		public static final int INVALID_BOND_BASE_INFO_TENOR_DAY = BASE + 214;
+		public static final int INVALID_BOND_BASE_INFO_ISSUE_EXPECTED_DATE = BASE + 215;
+
+		public static final int INVALID_BOND_CALL_RULE_BOND_ID = BASE + 220;
+		public static final int INVALID_BOND_CALL_RULE_CALL_OPTION_VALID_AFTER = BASE + 221;
+		public static final int INVALID_BOND_CALL_RULE_EARLY_REDMPTION_NOTICE_DATE = BASE + 222;
+		public static final int INVALID_BOND_CALL_RULE_ISSUER_CALL_OPTION_DESC = BASE + 223;
+		public static final int INVALID_BOND_CALL_RULE_PRINCIPLE_PMT_SCHEDULE = BASE + 224;
+		public static final int INVALID_BOND_CALL_RULE_REDEMPTION_FAIL_UP_ASSET = BASE + 225;
+		public static final int INVALID_BOND_CALL_RULE_OTHER_REDEMPTION_EVENT = BASE + 226;
+
+		public static final int INVALID_BOND_COUPON_BOND_ID = BASE + 230;
+		public static final int INVALID_BOND_COUPON_COUPON_FORM = BASE + 231;
+		public static final int INVALID_BOND_COUPON_DISCOUNT_ZERO_COUPON = BASE + 232;
+		public static final int INVALID_BOND_COUPON_COUPON_PMT_FREQ = BASE + 233;
+		public static final int INVALID_BOND_COUPON_COUPON_CALCULATION = BASE + 234;
+		public static final int INVALID_BOND_COUPON_REF_RATE_TYPE = BASE + 235;
+		public static final int INVALID_BOND_COUPON_REF_RATE_CUSTOMER = BASE + 236;
+		public static final int INVALID_BOND_COUPON_NUMBER_OF_FIXED_PREIOD = BASE + 237;
+		public static final int INVALID_BOND_COUPON_COUPON_SPREAD = BASE + 238;
+		public static final int INVALID_BOND_COUPON_REFERENCE_BANKS = BASE + 239;
+		public static final int INVALID_BOND_COUPON_REFERENCE_TERM = BASE + 240;
+		public static final int INVALID_BOND_COUPON_COUPON_DESC = BASE + 241;
+		public static final int INVALID_BOND_COUPON_COUPON_ZERO_COUPON_PRICE_AT_ISSUE = BASE + 242;
+		public static final int INVALID_BOND_COUPON_COUPON_ZERO_COUPON_PRICE_AT_MATURITY = BASE + 243;
+		public static final int INVALID_BOND_COUPON_COUPON_ZERO_REFERENCE_RATE_TERM = BASE + 244;
+
+		public static final int INVALID_BOND_CONVENANT_BOND_ID = BASE + 250;
+		public static final int INVALID_BOND_CONVENANT_BASIC = BASE + 251;
+		public static final int INVALID_BOND_CONVENANT_MERGE_ANALYZE = BASE + 252;
+		public static final int INVALID_BOND_CONVENANT_INFO_DISCLOSURE = BASE + 253;
+		public static final int INVALID_BOND_CONVENANT_PAYMENT_PROVISION = BASE + 254;
+		public static final int INVALID_BOND_CONVENANT_CASH_FLOW = BASE + 255;
+		public static final int INVALID_BOND_CONVENANT_MAINTAIN_OWNERSHIP = BASE + 256;
+		public static final int INVALID_BOND_CONVENANT_OTHERS = BASE + 257;
+
+		public static final int INVALID_BOND_EOD_BOND_ID = BASE + 260;
+		public static final int INVALID_BOND_EOD_NON_PAYMENT = BASE + 261;
+		public static final int INVALID_BOND_EOD_INSOLVENCY = BASE + 262;
+		public static final int INVALID_BOND_EOD_BREACH_OF_CONVENANTS = BASE + 263;
+		public static final int INVALID_BOND_EOD_CROSS_DEFAULT = BASE + 264;
+		public static final int INVALID_BOND_EOD_OTHER = BASE + 265;
+
+		public static final int INVALID_BOND_HOLDER_RULE_BOND_ID = BASE + 280;
+		public static final int INVALID_BOND_HOLDER_RULE_CALL_HOLDER_MEETING_REQ = BASE + 281;
+		public static final int INVALID_BOND_HOLDER_RULE_CARRY_HOLDER_MEETING_REQ = BASE + 282;
+		public static final int INVALID_BOND_HOLDER_RULE_SIMPLE_MAJORITY_RESOLUTION = BASE + 283;
+		public static final int INVALID_BOND_HOLDER_RULE_SUPER_MAJORITY_RESOLUTION = BASE + 284;
+		public static final int INVALID_BOND_HOLDER_RULE_DESCRIPTION = BASE + 285;
+		public static final int INVALID_BOND_HOLDER_FORMAT_NUMBER = BASE + 286;
+		public static final int INVALID_BOND_HOLDER_RULE_APPLIED_MATTER_MEETING_HOLDING = BASE + 287;
+		public static final int INVALID_BOND_HOLDER_RULE_APPLIED_MATTER_MEETING_RESOLUTION = BASE + 288;
+		public static final int INVALID_BOND_HOLDER_RULE_APPLIED_MATTER_WRITTEN = BASE + 289;
+
+		public static final int INVALID_BOND_ISSUANCE_PARTICIPANT_PARTICIPANT_ID = BASE + 290;
+		public static final int INVALID_BOND_ISSUANCE_PARTICIPANT_BOND_ID = BASE + 291;
+		public static final int INVALID_BOND_ISSUANCE_PARTICIPANT_COMPANY_GROUP_TYPE = BASE + 292;
+		public static final int INVALID_BOND_ISSUANCE_PARTICIPANT_PARTICIPANT_TYPE = BASE + 293;
+		public static final int INVALID_BOND_ISSUANCE_PARTICIPANT_COMPANY = BASE + 294;
+		public static final int INVALID_BOND_PARTICIPANT_CONTACT_ID = BASE + 295;
+		public static final int INVALID_BOND_PARTICIPANT_CONTACT_PARTICIPANT_ID = BASE + 296;
+		public static final int INVALID_BOND_PARTICIPANT_CONTACT_EMPLOYEE = BASE + 297;
+		public static final int INVALID_BOND_PARTICIPANT_CONTACT_BOND_ROLE = BASE + 298;
+		public static final int INVALID_BOND_PARTICIPANT_CONTACT_DESCRIPTION = BASE + 299;
+
+		public static final int INVALID_BOND_ISSUANCE_TIMELINE_BOND_ID = BASE + 310;
+		public static final int INVALID_BOND_ISSUANCE_TIMELINE_ISSUANCE_TIMELINE_BEGIN = BASE + 311;
+		public static final int INVALID_BOND_ISSUANCE_TIMELINE_ISSUANCE_TIMELINE_CLOSE = BASE + 312;
+		public static final int INVALID_BOND_ISSUANCE_TIMELINE_STATUS = BASE + 313;
+		public static final int INVALID_BOND_ISSUANCE_TIMELINE_PHASE = BASE + 314;
+		public static final int INVALID_BOND_ISSUANCE_TIMELINE_FOLLOW_UP = BASE + 315;
+
+		public static final int INVALID_BOND_ISSUANCE_FEE_PERIOD_PERIOD_ID = BASE + 320;
+		public static final int INVALID_BOND_ISSUANCE_FEE_PERIOD_BOND_ID = BASE + 321;
+		public static final int INVALID_BOND_ISSUANCE_FEE_PERIOD_FEE_TYPE = BASE + 322;
+		public static final int INVALID_BOND_ISSUANCE_FEE_PERIOD_PERIOD_TYPE = BASE + 323;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_ID = BASE + 325;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_PERIOD_ID = BASE + 326;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_NAME = BASE + 327;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_VALUE = BASE + 328;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_AMOUNT = BASE + 329;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_FEE_DATE = BASE + 330;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_BILL_DATE = BASE + 331;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_REVENUE_DATE = BASE + 332;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_START_DATE = BASE + 333;
+		public static final int INVALID_BOND_ISSUANCE_FEE_TERM_END_DATE = BASE + 334;
+
+		public static final int INVALID_BOND_OTHER_INFOS_BOND_ID = BASE + 350;
+		public static final int INVALID_BOND_OTHER_INFOS_KEY_SUBSIDIARY_DEF = BASE + 351;
+		public static final int INVALID_BOND_OTHER_INFOS_MATERIAL_ADVERSE_EFFECT_DEF = BASE + 352;
+		public static final int INVALID_BOND_OTHER_INFOS_REPAYMENT_SOURCE = BASE + 353;
+		public static final int INVALID_BOND_OTHER_INFOS_ADDITIONNAL_ISSUE_REQUIREMENT = BASE + 354;
+		public static final int INVALID_BOND_OTHER_INFOS_OTHERS = BASE + 355;
+
+		public static final int INVALID_BOND_TNC_BOND_ID = BASE + 360;
+		public static final int INVALID_BOND_TNC_ISSUANCE_FORM = BASE + 361;
+		public static final int INVALID_BOND_TNC_ISSUANCE_METHOD = BASE + 362;
+		public static final int INVALID_BOND_TNC_SENIORITY = BASE + 363;
+		public static final int INVALID_BOND_TNC_LISTING_REQUIREMENT = BASE + 364;
+		public static final int INVALID_BOND_TNC_EQUITY_LINKED_DESC = BASE + 365;
+
+		public static final int INVALID_BOND_UOP_BOND_ID = BASE + 370;
+		public static final int INVALID_BOND_UOP_DETAIL = BASE + 371;
+		public static final int INVALID_BOND_UOP_DUE_DILIGENCE_DOCUMMENTS = BASE + 372;
+		public static final int INVALID_BOND_UOP_DISBURSEMENT_CPS = BASE + 373;
+		public static final int INVALID_BOND_UOP_POST_ISSUE_REPORT = BASE + 374;
+
+		public static final int INVALID_BOND_SECURED_ASSET_ID = BASE + 380;
+		public static final int INVALID_BOND_SECURED_ASSET_BOND_ID = BASE + 381;
+		public static final int INVALID_BOND_SECURED_ASSET_SECURED_ASSET_NAME = BASE + 382;
+		public static final int INVALID_BOND_SECURED_ASSET_TYPE_LEVEL1 = BASE + 383;
+		public static final int INVALID_BOND_SECURED_ASSET_TYPE_LEVEL2 = BASE + 384;
+		public static final int INVALID_BOND_SECURED_ASSET_ASSET_DESC = BASE + 385;
+		public static final int INVALID_BOND_SECURED_ASSET_VALUE_AT_ISSUE_DETERMINANT = BASE + 386;
+		public static final int INVALID_BOND_SECURED_ASSET_MINIMUM_SECURITY_RATIO = BASE + 387;
+		public static final int INVALID_BOND_SECURED_ASSET_SECURING_RATIO_DETERMINANT = BASE + 388;
+		public static final int INVALID_BOND_SECURED_ASSET_SECURING_RATIO = BASE + 389;
+		public static final int INVALID_BOND_SECURED_ASSET_APPRAISED_VALUE = BASE + 390;
+		public static final int INVALID_BOND_SECURED_ASSET_SHARE_TYPE = BASE + 391;
+		public static final int INVALID_BOND_SECURED_ASSET_SHARE_QUANTITY = BASE + 392;
+		public static final int INVALID_BOND_SECURED_ASSET_SHARE_PAR_VALUE = BASE + 393;
+		public static final int INVALID_BOND_SECURED_ASSET_SHARE_MARKET_VALUE = BASE + 394;
+		public static final int INVALID_BOND_SECURED_ASSET_CAPITAL_BOOK_VALUE = BASE + 395;
+		public static final int INVALID_BOND_SECURED_ASSET_RATIO_NOTE = BASE + 396;
+		public static final int INVALID_BOND_SECURED_ASSET_DEPOSITORY_ACCOUNT = BASE + 397;
+		public static final int INVALID_BOND_SECURED_ASSET_BOND_ASSET_APPRAISER_DESC = BASE + 398;
+
+		public static final int INVALID_BOND_TNC_TYPE_INPUT = BASE + 410;
+		public static final int INVALID_BOND_TNC_TYPE_BOND_ID = BASE + 411;
+		public static final int INVALID_BOND_TNC_TYPE_TNC_TYPE = BASE + 412;
+		public static final int INVALID_BOND_UOP_TYPE_INPUT = BASE + 413;
+		public static final int INVALID_BOND_UOP_TYPE_BOND_ID = BASE + 414;
+		public static final int INVALID_BOND_UOP_TYPE_UOP_TYPE = BASE + 415;
+
+		public static final int INVALID_BOND_ISSUANCE_DISTRIBUTION_ID = BASE + 420;
+		public static final int INVALID_BOND_ISSUANCE_DISTRIBUTION_DISTRIBUTION_TYPE_ID = BASE + 421;
+		public static final int INVALID_BOND_ISSUANCE_DISTRIBUTION_INVESTOR_COMPANY_ID = BASE + 422;
+		public static final int INVALID_BOND_ISSUANCE_DISTRIBUTION_INVESTOR_GROUP_ID = BASE + 423;
+		public static final int INVALID_BOND_ISSUANCE_DISTRIBUTION_SUBSCRIPTION_TYPE_ID = BASE + 424;
+		public static final int INVALID_BOND_ISSUANCE_DISTRIBUTION_SUBSCRIPTION_AMOUNT = BASE + 425;
+		public static final int INVALID_BOND_ISSUANCE_DISTRIBUTION_TENTATIVE_SUBSCRIPTION_DATE = BASE + 426;
+		public static final int INVALID_BOND_ISSUANCE_DISTRIBUTION_INVESTOR_PIC_ID = BASE + 427;
+		public static final int INVALID_BOND_ISSUANCE_DISTRIBUTION_INVESTOR_TCBS_PIC_ID = BASE + 428;
+
+		public static final int INVALID_BOND_DISTRIBUTION_WAREHOUSE_ID = BASE + 430;
+		public static final int INVALID_BOND_DISTRIBUTION_WAREHOUSE_COMPANY_ID = BASE + 431;
+		public static final int INVALID_BOND_DISTRIBUTION_WAREHOUSE_INVESTOR_GROUP_ID = BASE + 432;
+		public static final int INVALID_BOND_DISTRIBUTION_WAREHOUSE_SUBSCRIPTION_TYPE_ID = BASE + 433;
+		public static final int INVALID_BOND_DISTRIBUTION_WAREHOUSE_SUBSCRIPTION_AMOUNT = BASE + 434;
+		public static final int INVALID_BOND_DISTRIBUTION_WAREHOUSE_TENTATIVE_SUBSCRIPTION_DATE = BASE + 435;
+		public static final int INVALID_BOND_DISTRIBUTION_WAREHOUSE_TENTATIVE_TRANSFER_DATE = BASE + 436;
+		public static final int INVALID_BOND_DISTRIBUTION_WAREHOUSE_PIC_ID = BASE + 437;
+		public static final int INVALID_BOND_DISTRIBUTION_WAREHOUSE_TCBS_PIC_ID = BASE + 438;
+
+		public static final int INVALID_BOND_LISTING_ID = BASE + 440;
+		public static final int INVALID_BOND_LISTING_BOND_ID = BASE + 441;
+		public static final int INVALID_BOND_LISTING_STATUS = BASE + 442;
+		public static final int INVALID_BOND_LISTING_TRADING_STATUS = BASE + 443;
+		public static final int INVALID_BOND_LISTING_EXCHANGE = BASE + 444;
+		public static final int INVALID_BOND_LISTING_VSD_EXCHANGE = BASE + 445;
+		public static final int INVALID_BOND_LISTING_STOCK_EXCHANGE_STATUS = BASE + 446;
+		public static final int INVALID_BOND_LISTING_CODE = BASE + 447;
+		public static final int INVALID_BOND_LISTING_ISIN_CODE = BASE + 448;
+
+		public static final int INVALID_COMPANY_EMPLOYEE_TITLE_ID = BASE + 450;
+		public static final int INVALID_COMPANY_EMPLOYEE_TITLE_EMPLOYEE_ID = BASE + 451;
+		public static final int INVALID_COMPANY_EMPLOYEE_TITLE_TITLE = BASE + 452;
+		public static final int INVALID_COMPANY_EMPLOYEE_TITLE_DEPARTMENT = BASE + 453;
+
+		public static final int INVALID_COMPANY_EMPLOYEE_OTHER_ID = BASE + 460;
+		public static final int INVALID_COMPANY_EMPLOYEE_OTHER_TITLE = BASE + 461;
+
+		public static final int INVALID_BOND_COUPON_DETAIL_ID = BASE + 470;
+		public static final int INVALID_BOND_COUPON_DETAIL_BOND_ID = BASE + 471;
+		public static final int INVALID_BOND_COUPON_DETAIL_COUPON_TYPE_ID = BASE + 472;
+		public static final int INVALID_BOND_COUPON_DETAIL_COUPON_PERIOD_TYPE_ID = BASE + 473;
+		public static final int INVALID_BOND_COUPON_DETAIL_NUMBER_OF_FIXED_PERIOD = BASE + 474;
+		public static final int INVALID_BOND_COUPON_DETAIL_COUPON_SPREAD = BASE + 475;
+
+		public static final int INVALID_BOND_COUPON_REFERENCE_ID = BASE + 480;
+		public static final int INVALID_BOND_COUPON_REFERENCE_BOND_ID = BASE + 481;
+		public static final int INVALID_BOND_COUPON_REFERENCE_BANK_CODE = BASE + 482;
+		public static final int INVALID_BOND_COUPON_REFERENCE_BRANCH_CODE = BASE + 483;
+
+		public static final int INVALID_BOND_FEE_PAYMENT_DETAIL_RATE_CODE = BASE + 490;
+		public static final int INVALID_BOND_FEE_PAYMENT_DETAIL_AMOUNT_CODE = BASE + 491;
+		public static final int INVALID_BOND_FEE_PAYMENT_DETAIL_PERIOD_STARTDATE = BASE + 492;
+		public static final int INVALID_BOND_FEE_PAYMENT_DETAIL_PERIOD_ENDDATE = BASE + 493;
+		public static final int INVALID_BOND_FEE_PAYMENT_DETAIL_INVOICE_DATE = BASE + 494;
+		public static final int INVALID_BOND_FEE_PAYMENT_DETAIL_PAYMENT_DATE = BASE + 495;
+		public static final int INVALID_BOND_FEE_PAYMENT_DETAIL_REVENUE_RECOGNITION_DATE = BASE + 496;
+		public static final int INVALID_BOND_FEE_PAYMENT_DETAIL_ID = BASE + 497;
+
+		public static final int INVALID_BOND_FEE_ID = BASE + 510;
+		public static final int INVALID_BOND_FEE_TYPE = BASE + 511;
+		public static final int INVALID_BOND_FEE_PAYMENT_TYPE = BASE + 512;
+		public static final int INVALID_BOND_FEE_FREQUENCY_CODE = BASE + 513;
+		public static final int INVALID_BOND_FEE_TCB_FEE_SHARING = BASE + 514;
+		public static final int INVALID_BOND_FEE_DESCRIPTION = BASE + 515;
+
+		public static final int INVALID_DICTIONARY_APPLICABLE_PARTY_ID = BASE + 520;
+		public static final int INVALID_DICTIONARY_APPLICABLE_PARTY_DICTIONARY_DETAIL_ID = BASE + 521;
+		public static final int INVALID_DICTIONARY_APPLICABLE_PARTY_APPLICABLE_PARTY_TYPE = BASE + 522;
+
+		public static final int INVALID_DICTIONARY_LOCATION_ID = BASE + 525;
+		public static final int INVALID_DICTIONARY_LOCATION_DICTIONARY_DETAIL_ID = BASE + 526;
+		public static final int INVALID_DICTIONARY_LOCATION_LOCATION_TYPE = BASE + 527;
+
+		public static final int INVALID_DICTIONARY_DETAIL_ID = BASE + 530;
+		public static final int INVALID_DICTIONARY_DETAIL_DICTIONARY_ID = BASE + 531;
+		public static final int INVALID_DICTIONARY_DETAIL_NAME = BASE + 532;
+		public static final int INVALID_DICTIONARY_DETAIL_LOCATION_TYPE = BASE + 533;
+		public static final int INVALID_DICTIONARY_DETAIL_GENERAL_DESC = BASE + 534;
+		public static final int INVALID_DICTIONARY_DETAIL_DETAIL_DESC = BASE + 535;
+
+		public static final int INVALID_DICTIONARY_INFO_ID = BASE + 540;
+		public static final int INVALID_DICTIONARY_INFO_BOND_ID = BASE + 541;
+		public static final int INVALID_DICTIONARY_INFO_DICTIONARY_SET_TYPE = BASE + 542;
+		public static final int INVALID_DICTIONARY_INFO_APPLIED_CUSTOMER_TYPE = BASE + 543;
+
+		public static final int INVALID_BOND_GUARANTOR_ID = BASE + 550;
+		public static final int INVALID_BOND_GUARANTOR_BOND_ID = BASE + 551;
+		public static final int INVALID_BOND_GUARANTOR_FORM = BASE + 552;
+		public static final int INVALID_BOND_GUARANTOR_TYPE = BASE + 553;
+		public static final int INVALID_BOND_GUARANTOR_SECURED_ASSET_ID = BASE + 554;
+		public static final int INVALID_BOND_GUARANTOR_BY_PERSONAL = BASE + 555;
+		public static final int INVALID_BOND_GUARANTOR_PERSONAL_ID_NUM = BASE + 556;
+		public static final int INVALID_BOND_GUARANTOR_PERSONAL_ID_ISSUED_BY = BASE + 557;
+		public static final int INVALID_BOND_GUARANTOR_PERSONAL_PERM_ADDR = BASE + 558;
+		public static final int INVALID_BOND_GUARANTOR_PERSONAL_CONTACT_ADDR = BASE + 559;
+		public static final int INVALID_BOND_GUARANTOR_SPOUSE_ID_NUM = BASE + 560;
+		public static final int INVALID_BOND_GUARANTOR_SPOUSE_ID_ISSUED_BY = BASE + 561;
+		public static final int INVALID_BOND_GUARANTOR_SPOUSE_PERM_ADDR = BASE + 562;
+		public static final int INVALID_BOND_GUARANTOR_SPOUSE_CONTACT_ADDR = BASE + 563;
+		public static final int INVALID_BOND_GUARANTOR_PERSONAL_DOC_TYPE = BASE + 564;
+		public static final int INVALID_BOND_GUARANTOR_SPOUSE_DOC_TYPE = BASE + 565;
+
+		public static final int INVALID_BOND_MECHANISM_ID = BASE + 570;
+		public static final int INVALID_BOND_MECHANISM_SECURED_ASSET_ID = BASE + 571;
+		public static final int INVALID_BOND_MECHANISM_ASSET_REVALUATION = BASE + 572;
+		public static final int INVALID_BOND_MECHANISM_ASSET_REVALUATION_FREQUENCY = BASE + 573;
+		public static final int INVALID_BOND_MECHANISM_REVALUATION_DATE_DETERMINANT = BASE + 574;
+		public static final int INVALID_BOND_MECHANISM_REVALUATION_DETERMINANT = BASE + 575;
+		public static final int INVALID_BOND_MECHANISM_REVALUATION_OTHER = BASE + 576;
+		public static final int INVALID_BOND_MECHANISM_TOP_UP_CONDITIONS = BASE + 577;
+		public static final int INVALID_BOND_MECHANISM_TOP_DOWN_CONDITIONS = BASE + 578;
+		public static final int INVALID_BOND_MECHANISM_UNDERTAKINGS = BASE + 579;
+		public static final int INVALID_BOND_MECHANISM_SHARING = BASE + 580;
+		public static final int INVALID_BOND_MECHANISM_SHARING_VALUE = BASE + 581;
+		public static final int INVALID_BOND_MECHANISM_LIQUIDATION_CONDITIONS = BASE + 582;
+		public static final int INVALID_BOND_MECHANISM_LIQUIDATION_OTHER_MANAGEMENT = BASE + 583;
+		public static final int INVALID_BOND_MECHANISM_REVALUATION_DESCRIPTION = BASE + 584;
+
+		public static final int INVALID_BOND_ASSET_APPRAISER_ID = BASE + 590;
+		public static final int INVALID_BOND_ASSET_APPRAISER_PARRENT_ID = BASE + 591;
+		public static final int INVALID_BOND_ASSET_APPRAISER_PARRENT_TYPE = BASE + 592;
+
+		public static final int INVALID_BOND_GENERAL_ASSET_BOND_ID = BASE + 600;
+
+		public static final int INVALID_BOND_GUARANTEE_BOND_ID = BASE + 610;
+		public static final int INVALID_BOND_GUARANTEE_VALUE = BASE + 611;
+
+		public static final int INVALID_BOND_GUARANTEED_ID = BASE + 610;
+		public static final int INVALID_BOND_GUARANTEED_BOND_ID = BASE + 611;
+		public static final int INVALID_BOND_GUARANTEED_BEHALF_ROLE = BASE + 612;
+
+		public static final int INVALID_BOND_PRIMARY_DISTRIBUTION_BOND_ID = BASE + 616;
+		public static final int INVALID_BOND_PRIMARY_DISTRIBUTION_INVESTORS_TYPE = BASE + 617;
+		public static final int INVALID_BOND_PRIMARY_DISTRIBUTION_INVESTORS = BASE + 618;
+		public static final int INVALID_BOND_PRIMARY_DISTRIBUTION_INDENTURE_NUMBER = BASE + 619;
+		public static final int INVALID_BOND_PRIMARY_DISTRIBUTION_QUANTITY = BASE + 620;
+		public static final int INVALID_BOND_PRIMARY_DISTRIBUTION_PAYMENT_DATE = BASE + 621;
+		public static final int INVALID_BOND_PRIMARY_DISTRIBUTION_BOND_ORDER_PRICE = BASE + 622;
+		public static final int INVALID_BOND_PRIMARY_DISTRIBUTION_ACCOUNT_NUMBER = BASE + 623;
+
+		public static final int INVALID_BOND_TNC_OTHER_APPLICABLE_PARTY_APPLICABLE_PARTY_TYPE = BASE + 635;
+		public static final int INVALID_BOND_TNC_OTHER_LOCATION_LOCATION_TYPE = BASE + 636;
+
+		public static final int INVALID_BOND_TNC_OTHER_DETAIL_ID = BASE + 640;
+		public static final int INVALID_BOND_TNC_OTHER_DETAIL_OTHER_INFO_ID = BASE + 641;
+		public static final int INVALID_BOND_TNC_OTHER_DETAIL_NAME = BASE + 642;
+		public static final int INVALID_BOND_TNC_OTHER_DETAIL_LOCATION_TYPE = BASE + 643;
+		public static final int INVALID_BOND_TNC_OTHER_DETAIL_GENERAL_DESC = BASE + 644;
+		public static final int INVALID_BOND_TNC_OTHER_DETAIL_DETAIL_DESC = BASE + 645;
+		public static final int INVALID_BOND_TNC_OTHER_DETAIL_ORDER_BY = BASE + 646;
+
+		public static final int INVALID_BOND_TNC_OTHER_INFO_ID = BASE + 650;
+		public static final int INVALID_BOND_TNC_OTHER_INFO_NAME = BASE + 651;
+		public static final int INVALID_BOND_TNC_OTHER_INFO_TYPE = BASE + 652;
+		public static final int INVALID_BOND_TNC_OTHER_INFO_APPLIED_CUSTOMER_TYPE = BASE + 653;
+
+		public static final int INVALID_TERMSHEET_ID = BASE + 660;
+		public static final int INVALID_TERMSHEET_PROCESS_ID = BASE + 661;
+		public static final int INVALID_TERMSHEET_DEAL_ID = BASE + 662;
+		public static final int INVALID_TERMSHEET_VERSION_NOTE_DATE = BASE + 663;
+
+		public static final int INVALID_BOND_TERM_OTHER_TERM_ID = BASE + 670;
+		public static final int INVALID_BOND_TERM_OTHER_DEAL_ID = BASE + 671;
+		public static final int INVALID_BOND_TERM_OTHER_CONTENT_TERM_ID = BASE + 672;
+		public static final int INVALID_BOND_TERM_OTHER_CONTENT_DEAL_ID = BASE + 673;
+		public static final int INVALID_BOND_TERM_OTHER_CONTENT_NAME = BASE + 674;
+
+		public static final int INVALID_CASE_DISBURSEMENT_PROGRESS_ID = BASE + 700;
+		public static final int INVALID_CASE_DISBURSEMENT_PROGRESS_CASE_ID = BASE + 701;
+		public static final int INVALID_CASE_DISBURSEMENT_PROGRESS_DISBURSEMENT_DATE = BASE + 702;
+		public static final int INVALID_CASE_DISBURSEMENT_PROGRESS_QUANTITY = BASE + 703;
+
+		public static final int INVALID_PROJECT_BASE_INFO_ID = BASE + 710;
+		public static final int INVALID_PROJECT_BASE_INFO_DEVELOPER = BASE + 711;
+		public static final int INVALID_PROJECT_BASE_INFO_PROJECT_NAME = BASE + 712;
+		public static final int INVALID_PROJECT_BASE_INFO_PROJECT_CODE = BASE + 713;
+		public static final int INVALID_PROJECT_BASE_INFO_ADDRESS_PROVINCE = BASE + 714;
+		public static final int INVALID_PROJECT_BASE_INFO_ADDRESS_DISTRICT = BASE + 715;
+		public static final int INVALID_PROJECT_BASE_INFO_ADDRESS_LINE1 = BASE + 716;
+		public static final int INVALID_PROJECT_BASE_INFO_OTHER_DESC = BASE + 717;
+		public static final int INVALID_PROJECT_BASE_INFO_LAND_AREA = BASE + 718;
+		public static final int INVALID_PROJECT_BASE_INFO_AREA_METRIC_TYPE = BASE + 719;
+		public static final int INVALID_PROJECT_BASE_INFO_LAND_GFA = BASE + 720;
+		public static final int INVALID_PROJECT_BASE_INFO_LAND_NSA = BASE + 721;
+		public static final int INVALID_PROJECT_BASE_INFO_LAND_NOTE = BASE + 722;
+
+		public static final int INVALID_PROJECT_PROGRESS_ID = BASE + 725;
+		public static final int INVALID_PROJECT_PROGRESS_START_TIME = BASE + 726;
+		public static final int INVALID_PROJECT_PROGRESS_HANDOVER_TIME = BASE + 727;
+		public static final int INVALID_PROJECT_PROGRESS_PROGRESS_TYPE = BASE + 728;
+		public static final int INVALID_PROJECT_PROGRESS_LEAGAL_STATUS = BASE + 729;
+
+		public static final int INVALID_PROJECT_FORM_TYPE = BASE + 730;
+
+		public static final int INVALID_PROJECT_LAND_LEGAL_ID = BASE + 735;
+		public static final int INVALID_PROJECT_LAND_LEGAL_PROJECT_ID = BASE + 736;
+		public static final int INVALID_PROJECT_LAND_LEGAL_LAND_LEGAL_DOC_NAME_TYPE = BASE + 737;
+		public static final int INVALID_PROJECT_LAND_LEGAL_ISSUED_BY_PROVINCE = BASE + 738;
+		public static final int INVALID_PROJECT_LAND_LEGAL_ISSUED_BY_DISTRICT = BASE + 739;
+		public static final int INVALID_PROJECT_LAND_LEGAL_DOC_NO = BASE + 740;
+		public static final int INVALID_PROJECT_LAND_LEGAL_DOC_DATE = BASE + 741;
+		public static final int INVALID_PROJECT_LAND_LEGAL_DOC_NOTE = BASE + 742;
+		public static final int INVALID_PROJECT_LAND_LEGAL_IS_LAND_LEGAL_PRIMARY = BASE + 743;
+		public static final int INVALID_PROJECT_LAND_LEGAL_ISSUED_BY = BASE + 744;
+
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_ID = BASE + 745;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_PROJECT_ID = BASE + 746;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_NAME = BASE + 747;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_TYPE = BASE + 748;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_ADDRESS_PROVINCE = BASE + 749;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_ADDRESS_DISTRICT = BASE + 750;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_ADDRESS_LINE1 = BASE + 751;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_GROUP_TYPE = BASE + 752;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_OWNERSHIP_TYPE = BASE + 753;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_EXPIRY_DATE_TYPE = BASE + 754;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_EXPIRY_DATE_NUMBER = BASE + 755;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_NO = BASE + 756;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_MAP_NO = BASE + 757;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_AREA = BASE + 758;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_USE_TYPE = BASE + 759;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_NO = BASE + 760;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_DATE = BASE + 761;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_ISSUE_BY = BASE + 762;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_ISSUE_BY_PROVINCE = BASE + 763;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_ISSUE_BY_DISTRICT = BASE + 764;
+		public static final int INVALID_PROJECT_LAND_LOT_INFO_LAND_BOOK_RECORD_NO = BASE + 765;
+
+		public static final int INVALID_PROJECT_LAND_LOT_PURPOSE_ID = BASE + 770;
+		public static final int INVALID_PROJECT_LAND_LOT_PURPOSE_LAND_LOT_INFO_ID = BASE + 771;
+		public static final int INVALID_PROJECT_LAND_LOT_PURPOSE_LAND_LOT_USE_PURPOSE_TYPE = BASE + 772;
+		public static final int INVALID_PROJECT_LAND_LOT_PURPOSE_PURPOSE_AREA = BASE + 773;
+
+		public static final int INVALID_SUBPROJECT_LEGAL_ID = BASE + 780;
+		public static final int INVALID_SUBPROJECT_LEGAL_PROJECT_LEGAL_DOC_NAME = BASE + 781;
+		public static final int INVALID_SUBPROJECT_LEGAL_ISSUED_BY_TYPE = BASE + 782;
+		public static final int INVALID_SUBPROJECT_LEGAL_ISSUED_BY_PROVINCE = BASE + 783;
+		public static final int INVALID_SUBPROJECT_LEGAL_ISSUED_BY_DISTRICT = BASE + 784;
+		public static final int INVALID_SUBPROJECT_LEGAL_DOC_NO = BASE + 785;
+		public static final int INVALID_SUBPROJECT_LEGAL_DOC_DATE = BASE + 786;
+		public static final int INVALID_SUBPROJECT_LEGAL_DOC_NOTE = BASE + 787;
+
+		public static final int INVALID_SUBPROJECT_INFO_ID = BASE + 790;
+		public static final int INVALID_SUBPROJECT_INFO_NAME = BASE + 791;
+		public static final int INVALID_SUBPROJECT_INFO_DESC = BASE + 792;
+		public static final int INVALID_SUBPROJECT_INFO_LAND_AREA = BASE + 793;
+		public static final int INVALID_SUBPROJECT_INFO_GFA = BASE + 794;
+		public static final int INVALID_SUBPROJECT_INFO_NSA = BASE + 795;
+		public static final int INVALID_SUBPROJECT_INFO_NOTE = BASE + 796;
+
+		public static final int INVALID_PROJECT_ACCOUNT_ID = BASE + 800;
+		public static final int INVALID_PROJECT_ACCOUNT_ACCOUNT_NAME = BASE + 801;
+		public static final int INVALID_PROJECT_ACCOUNT_ACCOUNT_NO = BASE + 802;
+		public static final int INVALID_PROJECT_ACCOUNT_DESCRIPTION = BASE + 803;
+
+		public static final int INVALID_PROJECT_AGREEMENT_ID = BASE + 810;
+		public static final int INVALID_PROJECT_AGREEMENT_NAME = BASE + 811;
+		public static final int INVALID_PROJECT_AGREEMENT_NAME_LENGTH = BASE + 812;
+		public static final int INVALID_PROJECT_AGREEMENT_NO_LENGTH = BASE + 813;
+		public static final int INVALID_PROJECT_AGREEMENT_NOTE_LENGTH = BASE + 814;
+		public static final int INVALID_PROJECT_AGREEMENT_SIGNING_DATE = BASE + 815;
+
+		public static final int INVALID_PROJECT_AGREEMENT_PARTY_ID = BASE + 820;
+
+		public static final int INVALID_PROJECT_LEGAL_ID = BASE + 830;
+		public static final int INVALID_PROJECT_LEGAL_PROJECT_ID = BASE + 831;
+		public static final int INVALID_PROJECT_LEGAL_DOC_NAME_TYPE = BASE + 832;
+		public static final int INVALID_PROJECT_LEGAL_ISSUED_BY_PROVINCE = BASE + 833;
+		public static final int INVALID_PROJECT_LEGAL_ISSUED_BY_DISTRICT = BASE + 834;
+		public static final int INVALID_PROJECT_LEGAL_DOC_NO = BASE + 835;
+		public static final int INVALID_PROJECT_LEGAL_DOC_DATE = BASE + 836;
+		public static final int INVALID_PROJECT_LEGAL_DOC_NOTE = BASE + 837;
+		public static final int INVALID_PROJECT_LEGAL_IS_LEGAL_PRIMARY = BASE + 838;
+		public static final int INVALID_PROJECT_LEGAL_ISSUE_TYPE = BASE + 839;
+		public static final int DUPLICATED_PROJECT_LEGAL_DOC_NAME_TYPE = BASE + 840;
+
+		public static final int INVALID_CASE_INFO_CASE_ID = BASE + 900;
+		public static final int INVALID_CASE_INFO_CASE_NAME = BASE + 901;
+		public static final int INVALID_CASE_INFO_ISSUER = BASE + 902;
+		public static final int INVALID_CASE_INFO_QUANTITY = BASE + 903;
+		public static final int INVALID_CASE_INFO_DEAL_SUPERVISOR = BASE + 904;
+		public static final int INVALID_CASE_INFO_DEAL_OWNER = BASE + 905;
+		public static final int INVALID_CASE_INFO_DEAL_SUPPORTER = BASE + 906;
+		public static final int INVALID_CASE_INFO_CASE_STATUS = BASE + 907;
+		public static final int INVALID_CASE_INFO_DEAL_SPECIALIST = BASE + 908;
+		public static final int INVALID_CASE_INFO_DEAL_FOLLOWER = BASE + 909;
+		public static final int INVALID_CASE_INFO_ISSUANCE_FORM = BASE + 950;
+		public static final int INVALID_CASE_INFO_ISSUANCE_METHOD = BASE + 951;
+		public static final int INVALID_CASE_INFO_SENIORITY = BASE + 952;
+		public static final int INVALID_CASE_INFO_CURRENCY_TYPE = BASE + 953;
+		public static final int INVALID_CASE_INFO_PAR_VALUE = BASE + 954;
+		public static final int INVALID_CASE_INFO_AMOUNT = BASE + 955;
+
+		public static final int INVALID_PERSON_INFO_PERSONID = BASE + 910;
+		public static final int NOT_EXISTS_PERSONID = BASE + 911;
+		public static final int INVALID_PERSONID = BASE + 912;
+		public static final int INVALID_DUPLICATE_PERSON = BASE + 913;
+
+		public static final int INVALID_TEMPLATE_CODE = BASE + 914;
+
+		public static final int INVALID_COMPONENT_NAME = BASE + 915;
+		public static final int INVALID_COMPONENT_TYPE = BASE + 916;
+		public static final int INVALID_MAX_LENGTH = BASE + 917;
+		public static final int INVALID_BOND_REAL_ESTATE_PRJ_SECURED_ASSET = BASE + 918;
+		public static final int INVALID_PRJ_CONSTRUCITON_ID = BASE + 919;
+
+		public static final int INVALID_BOND_TO_SELL_BUILDBOOK_DEADLINE = BASE + 930;
+		public static final int INVALID_BOND_TO_SELL_PIORITY = BASE + 932;
+		public static final int INVALID_BOND_TO_SELL_NOTE = BASE + 933;
+		public static final int INVALID_BOND_TO_SELL_BOND_ID = BASE + 934;
+
+		public static final int INVALID_BOND_EXPOSE_AMOUNT_DETAIL_INVESTER_TYPE = BASE + 935;
+		public static final int INVALID_BOND_EXPOSE_AMOUNT_DETAIL_AMOUNT = BASE + 936;
+
+		public static final int INVALID_PERSON_INFO_NAME = BASE + 937;
+		public static final int INVALID_PERSON_INFO_NAME_NO_ACCENT = BASE + 938;
+
+		public static final int INVALID_COMPONENT_LANDAREA = BASE + 939;
+		public static final int INVALID_COMPONENT_NSA = BASE + 940;
+		public static final int INVALID_COMPONENT_GFA = BASE + 941;
+		public static final int INVALID_COMPONENT_OTHER_DESC = BASE + 942;
+
+		public static final int BOND_FUNDED_PRJ_INVALID_BONDID = BASE + 943;
+		public static final int BOND_FUNDED_PRJ_INVALID_PRJ_TYPE = BASE + 944;
+		public static final int BOND_FUNDED_PRJ_INVALID_PRJ_ID = BASE + 945;
+		public static final int BOND_FUNDED_PRJ_INVALID_MAXLENGTH = BASE + 946;
+		public static final int INVALID_COMPANY_EMPLOYEE_DUPILCATED = BASE + 947;
+
+		public static final int INVALID_DOCUMENT_INFO_CODE = BASE + 2000;
+		public static final int INVALID_DOCUMENT_INFO_NAME = BASE + 2001;
+
+		public static final int INVALID_BOND_TEMP_AMOUNT = BASE + 2002;
+		public static final int BOND_TEMP_NOT_EXISTED = BASE + 2003;
+
+		public static final int INVALID_BOND_ISSUE_EXPECTED_DATE = BASE + 2003;
+		public static final int INVALID_BOND_MAXIMUM_AMOUNT = BASE + 2004;
+		public static final int INVALID_BOND_MAXIMUM_AMOUNT_LENGTH = BASE + 2005;
+		public static final int INVALID_BOND_STATUS = BASE + 2006;
+
+		public static final int NOT_EXISTS_BONDID_BOND_PRIMARY_DISTRIBUTION = BASE + 2007;
+		public static final int INVALID_BOND_TEMP_ID = BASE + 2008;
+		public static final int BOND_IS_ACTIVE = BASE + 2009;
+		public static final int ERROR_ISSUED_BONDS = BASE + 2010;
+		public static final int CANNOT_DEACTIVATE_CLOSED_CASE = BASE + 2011;
+		public static final int CANNOT_DEACTIVATE_CASE_IF_BOND_ISSUED = BASE + 2012;
+		public static final int BOND_IS_INACTIVE = BASE + 2013;
+		public static final int CANNOT_DEACTIVATE_BOND_TEMPLATE_IF_BOND_ISSUED = BASE + 2014;
+		public static final int INVALID_BOND_DISBURSEMENT_PROGRESS = BASE + 2015;
+		public static final int CANNOT_DELETE_ACTIVE_CASE = BASE + 2016;
+		public static final int CANNOT_DELETE_ACTIVE_BOND_TEMPLATE = BASE + 2017;
+		public static final int CASE_INACTIVE = BASE + 2018;
+		public static final int CASE_NOT_EXISTS = BASE + 2019;
+		public static final int INVALID_CASE_AMOUNT = BASE + 2020;
+
+		public static String getMessage(int errorCode) {
+			switch (errorCode) {
+			case OK:
+				return "Success";
+			case INTERNAL_SERVER_ERROR:
+				return "Internal server error";
+			case INVALID_TOKEN:
+				return "Invalid token";
+			case INVALID_USERNAME:
+				return "Invalid username";
+			case INVALID_BODY:
+				return "Invalid body";
+			case INVALID_PAGE_INDEX:
+				return "Invalid page index";
+			case INVALID_PAGE_SIZE:
+				return "Invalid page size";
+
+			case NOT_EXISTS_BONDID:
+				return "This bondId is not exists";
+			case NOT_EXISTS_CASEID:
+				return "This caseId is not exists";
+			case NOT_EXISTS_COMPANYID:
+				return "This companyId is not exists";
+			case NOT_EXISTS_EMPLOYEEID:
+				return "This employeeId is not exists";
+			case NOT_EXISTS_CATEGORY:
+				return "This category is not exists";
+			case NOT_EXISTS_TERMSHET_VERSION:
+				return "This verion is not exists";
+			case NOT_EXISTS_COMPANY_NAME:
+				return "This company name not exists";
+			case NOT_EXISTS_TERMSHEET_ID:
+				return "This termsheet id not exists";
+			case NOT_EXISTS_TS_USER_TYPE:
+				return "This termsheet user type not exists";
+			case NOT_EXISTS_TS_STATUS:
+				return "This termsheet status not exists";
+			case NOT_EXISTS_DOCVERSION_ID:
+				return "This docversion id not exists";
+			case NOT_EXISTS_BOND_CODE:
+				return "This bond code not exists";
+			case NOT_EXISTS_PROJECT_ID:
+				return "This project id not exists";
+
+			case INVALID_BOND_DETAIL:
+				return "Invalid bond detail";
+			case INVALID_COMPANY_DETAIL:
+				return "Invalid company detail";
+			case INVALID_COMPANY_EMPLOYEE:
+				return "Invalid company employee";
+			case INVALID_COMPANY_EMPLOYEE_DUPILCATED:
+				return "Invalid company employee: Duplicated employee on same role";
+			case INVALID_CASE_DETAIL:
+				return "Invalid case info";
+			case INVALID_REFERENCE_DATA:
+				return "Invalid reference data";
+			case INVALID_DUPLICATE_COMPANY:
+				return "Invalid duplicate company name/shortname/ticker";
+
+			case INVALID_BONDID:
+				return "Invalid bondId";
+			case INVALID_CASEID:
+				return "Invalid caseId";
+			case INVALID_COMPANYID:
+				return "Invalid companyId";
+			case INVALID_EMPLOYEEID:
+				return "Invalid employeeId";
+			case INVALID_CATEGORY:
+				return "Invalid catogory";
+			case INVALID_SEARCH_KEY:
+				return "Invalid search key";
+			case INVALID_TERMSHET_VERSION:
+				return "Invalid version";
+			case INVALID_REFERECE_NAME:
+				return "Invalid reference name";
+			case INVALID_BOND_BASE_INFO:
+				return "Invalid bond base info";
+			case INVALID_COMPANY_BASE_INFO:
+				return "Invalid company base info";
+			case INVALID_APPLIED_CUSTOMER_TYPE:
+				return "Invalid applied customer type";
+			case INVALID_DICTIONARY_ID:
+				return "Invalid dictionary id";
+			case INVALID_BOND_CODE:
+				return "Invalid bond code";
+			case INVALID_PROJECT_ID:
+				return "Invalid project id";
+			case INVALID_BOND_PRIMARY_DISTRIBUTION_ID:
+				return "Invalid bond primary distribution id";
+
+			case INVALID_COMPANY_BASE_INFO_COMPANYID:
+				return "CompanyBaseInfo: Invalid company id";
+			case INVALID_COMPANY_BASE_INFO_NAME:
+				return "CompanyBaseInfo: Invalid name";
+			case INVALID_COMPANY_BASE_INFO_ENGNAME:
+				return "CompanyBaseInfo: Invalid english name";
+			case INVALID_COMPANY_BASE_INFO_SHORTNAME:
+				return "CompanyBaseInfo: Invalid short name";
+			case INVALID_COMPANY_BASE_INFO_TICKER:
+				return "CompanyBaseInfo: Invalid ticker";
+
+			case INVALID_COMPANY_BUSINESS_COMPANYID:
+				return "CompanyBusiness: Invalid company id";
+			case INVALID_COMPANY_BUSINESS_BRC_NO:
+				return "CompanyBusiness: Invalid brc no";
+			case INVALID_COMPANY_BUSINESS_BRC_INITIAL_DATE:
+				return "CompanyBusiness: Invalid brc initial date";
+			case INVALID_COMPANY_BUSINESS_BRC_ISSUED_BY:
+				return "CompanyBusiness: Invalid brc issued by";
+			case INVALID_COMPANY_BUSINESS_BRC_LATEST_UPDATE:
+				return "CompanyBusiness: Invalid brc lastest update";
+			case INVALID_COMPANY_BUSINESS_BRC_LATEST_UPDATE_DATE:
+				return "CompanyBusiness: Invalid brc lastest update date";
+			case INVALID_COMPANY_BUSINESS_CHARTERED_CAPITAL:
+				return "CompanyBusiness: Invalid chartered capital";
+			case INVALID_COMPANY_BUSINESS_BRC_SECTOR:
+				return "CompanyBusiness: Invalid brc sector";
+			case INVALID_COMPANY_BUSINESS_PHONE:
+				return "CompanyBusiness: Invalid phone";
+			case INVALID_COMPANY_BUSINESS_FAX:
+				return "CompanyBusiness: Invalid fax";
+			case INVALID_COMPANY_BUSINESS_ADDRESS:
+				return "CompanyBusiness: Invalid address";
+			case INVALID_COMPANY_BUSINESS_EMAIL:
+				return "CompanyBusiness: Invalid email";
+			case INVALID_COMPANY_BUSINESS_WEBSITE:
+				return "CompanyBusiness: Invalid website";
+
+			case INVALID_COMPANY_EMPLOYEE_ID:
+				return "CompanyEmployee: Invalid id";
+			case INVALID_COMPANY_EMPLOYEE_NAME:
+				return "CompanyEmployee: Invalid name";
+			case INVALID_COMPANY_EMPLOYEE_EMAIL:
+				return "CompanyEmployee: Invalid email";
+			case INVALID_COMPANY_EMPLOYEE_COMPANYID:
+				return "CompanyEmployee: Invalid company id";
+			case INVALID_COMPANY_EMPLOYEE_TITLE:
+				return "CompanyEmployee: Invalid title";
+			case INVALID_COMPANY_EMPLOYEE_DEPARTMENT:
+				return "CompanyEmployee: Invalid deparment";
+			case INVALID_COMPANY_EMPLOYEE_MOBILE:
+				return "CompanyEmployee: Invalid mobile";
+			case INVALID_COMPANY_EMPLOYEE_EXT:
+				return "CompanyEmployee: Invalid ext";
+			case INVALID_COMPANY_EMPLOYEE_IDENTIFIER:
+				return "CompanyEmployee: Invalid identifier";
+			case INVALID_COMPANY_EMPLOYEE_IS_LEGAL_REP:
+				return "CompanyEmployee: Invalid is legal rep";
+			case INVALID_COMPANY_EMPLOYEE_DESC:
+				return "CompanyEmployee: Invalid description";
+			case INVALID_COMPANY_EMPLOYEE_BIRTHPLACE:
+				return "CompanyEmployee: Invalid birthplace";
+			case INVALID_COMPANY_EMPLOYEE_ADDRESS:
+				return "CompanyEmployee: Invalid address";
+			case INVALID_COMPANY_EMPLOYEE_NATIONALITY:
+				return "CompanyEmployee: Invalid nationality";
+			case INVALID_COMPANY_EMPLOYEE_BACKGROUND:
+				return "CompanyEmployee: Invalid background";
+			case INVALID_COMPANY_EMPLOYEE_GENDER:
+				return "CompanyEmployee: Invalid gender";
+			case INVALID_COMPANY_EMPLOYEE_EDUCATION:
+				return "CompanyEmployee: Invalid education";
+			case INVALID_COMPANY_EMPLOYEE_SHARE_PERCENT:
+				return "CompanyEmployee: Invalid share percent";
+			case INVALID_COMPANY_EMPLOYEE_SHARE_IN_OTHER:
+				return "CompanyEmployee: Invalid share in other";
+			case INVALID_COMPANY_EMPLOYEE_SHARE_OF_OTHER:
+				return "CompanyEmployee: Invalid share of other";
+			case INVALID_COMPANY_EMPLOYEE_SHARE_OF_SPOUSES:
+				return "CompanyEmployee: Invalid share of spouses";
+			case INVALID_COMPANY_EMPLOYEE_CONFLICT:
+				return "CompanyEmployee: Invalid conflict";
+			case INVALID_COMPANY_EMPLOYEE_ILLEGAL:
+				return "CompanyEmployee: Invalid illegal";
+			case INVALID_COMPANY_EMPLOYEE_DEBT:
+				return "CompanyEmployee: Invalid debt";
+			case INVALID_COMPANY_EMPLOYEE_BENEFIT:
+				return "CompanyEmployee: Invalid benefit";
+			case INVALID_COMPANY_EMPLOYEE_OTHER_BENEFIT:
+				return "CompanyEmployee: Invalid other benefit";
+
+			case INVALID_COMPANY_MANAGEMENT_COMPANYID:
+				return "CompanyManagement: Invalid company id";
+			case INVALID_COMPANY_MANAGEMENT_REGION:
+				return "CompanyManagement: Invalid region";
+			case INVALID_COMPANY_MANAGEMENT_SEGMENT:
+				return "CompanyManagement: Invalid segment";
+			case INVALID_COMPANY_MANAGEMENT_SECTOR_L1:
+				return "CompanyManagement: Invalid sector level 1";
+			case INVALID_COMPANY_MANAGEMENT_SECTOR_L2:
+				return "CompanyManagement: Invalid sector level 2";
+			case INVALID_COMPANY_MANAGEMENT_PIC_SENIOR:
+				return "CompanyManagement: Invalid pic senior";
+			case INVALID_COMPANY_MANAGEMENT_PIC_DCM:
+				return "CompanyManagement: Invalid pic dcm";
+			case INVALID_COMPANY_MANAGEMENT_PIC_ANALYST:
+				return "CompanyManagement: Invalid pic analyst";
+			case INVALID_COMPANY_MANAGEMENT_CST_REP_IB:
+				return "CompanyManagement: Invalid crt rep ib";
+			case INVALID_COMPANY_MANAGEMENT_TCB_RM:
+				return "CompanyManagement: Invalid tcb rm";
+			case INVALID_COMPANY_MANAGEMENT_COMPANY_GROUP_TYPE:
+				return "CompanyManagement: Invalid company group type";
+			case INVALID_COMPANY_MANAGEMENT_COMPANY_PARENT:
+				return "CompanyManagement: Invalid company parent";
+			case INVALID_COMPANY_MANAGEMENT_PARENT_OWNERSHIP_RATE:
+				return "CompanyManagement: Invalid parent ownership rate";
+			case INVALID_COMPANY_MANAGEMENT_FI_SALE:
+				return "CompanyManagement: Invalid FI Sale";
+
+			case INVALID_COMPANY_PARENT_NULL:
+				return "CompanyParent: Input null";
+			case INVALID_COMPANY_PARENT_CHILDID:
+				return "CompanyParent: Invalid child id";
+			case INVALID_COMPANY_PARENT_PARENTID:
+				return "CompanyParent: Invalid parent id";
+
+			case INVALID_COMPANY_PARNTERSHIP_NULL:
+				return "CompanyParntership: Input null";
+			case INVALID_COMPANY_PARNTERSHIP_COMPANYID:
+				return "CompanyParntership: Invalid company id";
+			case INVALID_COMPANY_PARNTERSHIP_PARNTERSHIPID:
+				return "CompanyParntership: Invalid parntership id";
+
+			case INVALID_COMPANY_ACCOUNT_ID:
+				return "CompanyAccount: Invalid id";
+			case INVALID_COMPANY_ACCOUNT_COMPANYID:
+				return "CompanyAccount: Invalid company id";
+			case INVALID_COMPANY_ACCOUNT_ACCOUNTTYPE:
+				return "CompanyAccount: Invalid account type";
+			case INVALID_COMPANY_ACCOUNT_ACCOUNTNUMBER:
+				return "CompanyAccount: Invalid account number";
+			case INVALID_COMPANY_ACCOUNT_NAME:
+				return "CompanyAccount: Invalid name";
+			case INVALID_COMPANY_ACCOUNT_BRANCH:
+				return "CompanyAccount: Invalid branch";
+			case INVALID_COMPANY_ACCOUNT_CODE:
+				return "CompanyAccount: Invalid code";
+			case INVALID_COMPANY_ACCOUNT_PROVINCE:
+				return "CompanyAccount: Invalid province";
+
+			case INVALID_COMPANY_TAX_CODE_TAX_CODE:
+				return "CompanyTaxCode: Invalid Tax Code";
+			case INVALID_COMPANY_TAX_CODE_BRC_ISSUED_BY:
+				return "CompanyTaxCode: Invalid Brc Issued By";
+			case INVALID_COMPANY_TAX_CODE_BRC_INITIAL_DATE:
+				return "CompanyTaxCode: Invalid Brc Initial Date";
+
+			case INVALID_BOND_BASE_INFO_BOND_ID:
+				return "BondBaseInfo: Invalid bond id";
+			case INVALID_BOND_BASE_INFO_CASE_ID:
+				return "BondBaseInfo: Invalid case id";
+			case INVALID_BOND_BASE_INFO_BOND_NAME:
+				return "BondBaseInfo: Tên trái phiếu không hợp lệ hoặc đã tồn tại";
+			case INVALID_BOND_BASE_INFO_BOND_CODE:
+				return "BondBaseInfo: Mã trái phiếu không hợp lệ hoặc đã tồn tại";
+			case INVALID_BOND_BASE_INFO_DESCRIPTION:
+				return "BondBaseInfo: Invalid description";
+			case INVALID_BOND_BASE_INFO_QUANTITY:
+				return "BondBaseInfo: Invalid quantity";
+			case INVALID_BOND_BASE_INFO_PAR_VALUE:
+				return "BondBaseInfo: Invalid par value";
+			case INVALID_BOND_BASE_INFO_CURRENCY_TYPE:
+				return "BondBaseInfo: Invalid curreny type";
+			case INVALID_BOND_BASE_INFO_TENOR_YEAR:
+				return "BondBaseInfo: Invalid tenor year";
+			case INVALID_BOND_BASE_INFO_TENOR_MONTH:
+				return "BondBaseInfo: Invalid tenor month";
+			case INVALID_BOND_BASE_INFO_TENOR_DAY:
+				return "BondBaseInfo: Invalid tenor day";
+			case INVALID_BOND_BASE_INFO_ISSUE_DATE:
+				return "BondBaseInfo: Invalid issue date";
+			case INVALID_BOND_BASE_INFO_MATURITY_DATE:
+				return "BondBaseInfo: Invalid maturity date";
+			case INVALID_BOND_BASE_INFO_BOND_STATUS:
+				return "BondBaseInfo: Invalid bond status";
+			case INVALID_BOND_BASE_INFO_BOND_PARENT_ID:
+				return "BondBaseInfo: Invalid bond parent id";
+			case INVALID_BOND_BASE_INFO_ISSUE_EXPECTED_DATE:
+				return "BondBaseInfo: Invalid issue expected date";
+
+			case INVALID_BOND_CALL_RULE_BOND_ID:
+				return "BondCallRule: Invalid bond id";
+			case INVALID_BOND_CALL_RULE_ISSUER_CALL_OPTION_DESC:
+				return "BondCallRule: Invalid issuer call option description";
+			case INVALID_BOND_CALL_RULE_EARLY_REDMPTION_NOTICE_DATE:
+				return "BondCallRule: Invalid early redmption notice date";
+			case INVALID_BOND_CALL_RULE_CALL_OPTION_VALID_AFTER:
+				return "BondCallRule: Invalid call option valid after";
+			case INVALID_BOND_CALL_RULE_PRINCIPLE_PMT_SCHEDULE:
+				return "BondCallRule: Invalid principle pmt schedule";
+			case INVALID_BOND_CALL_RULE_REDEMPTION_FAIL_UP_ASSET:
+				return "BondCallRule: Invalid redemtion fail up asset";
+			case INVALID_BOND_CALL_RULE_OTHER_REDEMPTION_EVENT:
+				return "BondCallRule: Invalid other redemption event";
+
+			case INVALID_BOND_COUPON_BOND_ID:
+				return "BondCoupon: Invalid bond id";
+			case INVALID_BOND_COUPON_COUPON_FORM:
+				return "BondCoupon: Invalid couponn form";
+			case INVALID_BOND_COUPON_DISCOUNT_ZERO_COUPON:
+				return "BondCoupon: Invalid discount zero coupon";
+			case INVALID_BOND_COUPON_COUPON_PMT_FREQ:
+				return "BondCoupon: Invalid coupon PMT freq";
+			case INVALID_BOND_COUPON_COUPON_CALCULATION:
+				return "BondCoupon: Invalid coupon calculation";
+			case INVALID_BOND_COUPON_REF_RATE_TYPE:
+				return "BondCoupon: Invalid reference rate type";
+			case INVALID_BOND_COUPON_REF_RATE_CUSTOMER:
+				return "BondCoupon: Invalid reference rate customer";
+			case INVALID_BOND_COUPON_NUMBER_OF_FIXED_PREIOD:
+				return "BondCoupon: Invalid number of fixed preiod";
+			case INVALID_BOND_COUPON_COUPON_SPREAD:
+				return "BondCoupon: Invalid coupon spread";
+			case INVALID_BOND_COUPON_REFERENCE_BANKS:
+				return "BondCoupon: Invalid reference banks";
+			case INVALID_BOND_COUPON_REFERENCE_TERM:
+				return "BondCoupon: Invalid term";
+			case INVALID_BOND_COUPON_COUPON_DESC:
+				return "BondCoupon: Invalid desc";
+			case INVALID_BOND_COUPON_COUPON_ZERO_COUPON_PRICE_AT_ISSUE:
+				return "BondCoupon: Invalid zero coupon price at issue";
+			case INVALID_BOND_COUPON_COUPON_ZERO_COUPON_PRICE_AT_MATURITY:
+				return "BondCoupon: Invalid zero coupon price at maturity";
+			case INVALID_BOND_COUPON_COUPON_ZERO_REFERENCE_RATE_TERM:
+				return "BondCoupon: Invalid zero reference rate term";
+
+			case INVALID_BOND_CONVENANT_BOND_ID:
+				return "BondConvenant: Invalid bond id";
+			case INVALID_BOND_CONVENANT_BASIC:
+				return "BondConvenant: Invalid basic";
+			case INVALID_BOND_CONVENANT_MERGE_ANALYZE:
+				return "BondConvenant: Invalid merge analyze";
+			case INVALID_BOND_CONVENANT_INFO_DISCLOSURE:
+				return "BondConvenant: Invalid ";
+			case INVALID_BOND_CONVENANT_PAYMENT_PROVISION:
+				return "BondConvenant: Invalid ";
+			case INVALID_BOND_CONVENANT_CASH_FLOW:
+				return "BondConvenant: Invalid ";
+			case INVALID_BOND_CONVENANT_MAINTAIN_OWNERSHIP:
+				return "BondConvenant: Invalid ";
+			case INVALID_BOND_CONVENANT_OTHERS:
+				return "BondConvenant: Invalid ";
+
+			case INVALID_BOND_EOD_BOND_ID:
+				return "BondEOD: Invalid bond id";
+			case INVALID_BOND_EOD_NON_PAYMENT:
+				return "BondEOD: Invalid non payment";
+			case INVALID_BOND_EOD_INSOLVENCY:
+				return "BondEOD: Invalid insolvency";
+			case INVALID_BOND_EOD_BREACH_OF_CONVENANTS:
+				return "BondEOD: Invalid breach of convenants";
+			case INVALID_BOND_EOD_CROSS_DEFAULT:
+				return "BondEOD: Invalid cross default";
+			case INVALID_BOND_EOD_OTHER:
+				return "BondEOD: Invalid other";
+
+			case INVALID_BOND_GUARANTOR_ID:
+				return "BondGuarantor: Invalid id";
+			case INVALID_BOND_GUARANTOR_BOND_ID:
+				return "BondGuarantor: Invalid bond id";
+			case INVALID_BOND_GUARANTOR_FORM:
+				return "BondGuarantor: Invalid guarantor form";
+			case INVALID_BOND_GUARANTOR_TYPE:
+				return "BondGuarantor: Invalid guarantor type";
+			case INVALID_BOND_GUARANTOR_SECURED_ASSET_ID:
+				return "BondGuarantor: Invalid guarantor secured asset id";
+			case INVALID_BOND_GUARANTOR_BY_PERSONAL:
+				return "BondGuarantor: Invalid guarantor by personal";
+			case INVALID_BOND_GUARANTOR_PERSONAL_ID_NUM:
+				return "BondGuarantor: Invalid guarantor personal id number";
+			case INVALID_BOND_GUARANTOR_PERSONAL_ID_ISSUED_BY:
+				return "BondGuarantor: Invalid guarantor personal id issued by";
+			case INVALID_BOND_GUARANTOR_PERSONAL_PERM_ADDR:
+				return "BondGuarantor: Invalid guarantor personal permanent address";
+			case INVALID_BOND_GUARANTOR_PERSONAL_CONTACT_ADDR:
+				return "BondGuarantor: Invalid guarantor personal contact address";
+			case INVALID_BOND_GUARANTOR_SPOUSE_ID_NUM:
+				return "BondGuarantor: Invalid guarantor spouse id number";
+			case INVALID_BOND_GUARANTOR_SPOUSE_ID_ISSUED_BY:
+				return "BondGuarantor: Invalid guarantor spouse id issued by";
+			case INVALID_BOND_GUARANTOR_SPOUSE_PERM_ADDR:
+				return "BondGuarantor: Invalid guarantor spouse permanent address";
+			case INVALID_BOND_GUARANTOR_SPOUSE_CONTACT_ADDR:
+				return "BondGuarantor: Invalid guarantor spouse contact address";
+			case INVALID_BOND_GUARANTOR_PERSONAL_DOC_TYPE:
+				return "BondGuarantor: Invalid guarantor personal doc type";
+			case INVALID_BOND_GUARANTOR_SPOUSE_DOC_TYPE:
+				return "BondGuarantor: Invalid guarantor spouse doc type";
+
+			case INVALID_BOND_HOLDER_RULE_BOND_ID:
+				return "BondHolderRule: Invalid bond id";
+			case INVALID_BOND_HOLDER_RULE_CALL_HOLDER_MEETING_REQ:
+				return "BondHolderRule: Invalid call holder meeting request";
+			case INVALID_BOND_HOLDER_RULE_CARRY_HOLDER_MEETING_REQ:
+				return "BondHolderRule: Invalid carry holder meeting request";
+			case INVALID_BOND_HOLDER_RULE_SIMPLE_MAJORITY_RESOLUTION:
+				return "BondHolderRule: Invalid simple majority resolution";
+			case INVALID_BOND_HOLDER_RULE_SUPER_MAJORITY_RESOLUTION:
+				return "BondHolderRule: Invalid super majority resolution";
+			case INVALID_BOND_HOLDER_RULE_DESCRIPTION:
+				return "BondHolderRule: Invalid description length";
+			case INVALID_BOND_HOLDER_FORMAT_NUMBER:
+				return "BondHolderRule: Invalid format number";
+			case INVALID_BOND_HOLDER_RULE_APPLIED_MATTER_MEETING_HOLDING:
+				return "BondHolderRule: Invalid meeting holding applied matter";
+			case INVALID_BOND_HOLDER_RULE_APPLIED_MATTER_MEETING_RESOLUTION:
+				return "BondHolderRule: Invalid meeting resolution applied matter";
+			case INVALID_BOND_HOLDER_RULE_APPLIED_MATTER_WRITTEN:
+				return "BondHolderRule: Invalid written consent resolution applied matter";
+
+			case INVALID_BOND_ISSUANCE_PARTICIPANT_PARTICIPANT_ID:
+				return "BondIssuanceParticipant: Invalid participant id";
+			case INVALID_BOND_ISSUANCE_PARTICIPANT_BOND_ID:
+				return "BondIssuanceParticipant: Invalid bond id";
+			case INVALID_BOND_ISSUANCE_PARTICIPANT_COMPANY_GROUP_TYPE:
+				return "BondIssuanceParticipant: Invalid company group type";
+			case INVALID_BOND_ISSUANCE_PARTICIPANT_PARTICIPANT_TYPE:
+				return "BondIssuanceParticipant: Invalid participant type";
+			case INVALID_BOND_ISSUANCE_PARTICIPANT_COMPANY:
+				return "BondIssuanceParticipant: Invalid company";
+			case INVALID_BOND_PARTICIPANT_CONTACT_ID:
+				return "BondParticipantContact: Invalid id";
+			case INVALID_BOND_PARTICIPANT_CONTACT_PARTICIPANT_ID:
+				return "BondParticipantContact: Invalid participant id";
+			case INVALID_BOND_PARTICIPANT_CONTACT_EMPLOYEE:
+				return "BondParticipantContact: Invalid contact employee";
+			case INVALID_BOND_PARTICIPANT_CONTACT_BOND_ROLE:
+				return "BondParticipantContact: Invalid contact bond role";
+			case INVALID_BOND_PARTICIPANT_CONTACT_DESCRIPTION:
+				return "BondParticipantContact: Invalid contact description";
+
+			case INVALID_BOND_ISSUANCE_TIMELINE_BOND_ID:
+				return "BondIssuanceTimeline: Invalid bond id";
+			case INVALID_BOND_ISSUANCE_TIMELINE_ISSUANCE_TIMELINE_BEGIN:
+				return "BondIssuanceTimeline: Invalid issuance timeline begin";
+			case INVALID_BOND_ISSUANCE_TIMELINE_ISSUANCE_TIMELINE_CLOSE:
+				return "BondIssuanceTimeline: Invalid issuance timeline close";
+			case INVALID_BOND_ISSUANCE_TIMELINE_STATUS:
+				return "BondIssuanceTimeline: Invalid status";
+			case INVALID_BOND_ISSUANCE_TIMELINE_PHASE:
+				return "BondIssuanceTimeline: Invalid phase";
+			case INVALID_BOND_ISSUANCE_TIMELINE_FOLLOW_UP:
+				return "BondIssuanceTimeline: Invalid follow up";
+
+			case INVALID_BOND_ISSUANCE_FEE_PERIOD_PERIOD_ID:
+				return "BondIssuanceFeePeriod: Invalid period id";
+			case INVALID_BOND_ISSUANCE_FEE_PERIOD_BOND_ID:
+				return "BondIssuanceFeePeriod: Invalid bond id";
+			case INVALID_BOND_ISSUANCE_FEE_PERIOD_FEE_TYPE:
+				return "BondIssuanceFeePeriod: Invalid fee type";
+			case INVALID_BOND_ISSUANCE_FEE_PERIOD_PERIOD_TYPE:
+				return "BondIssuanceFeePeriod: Invalid period type";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_ID:
+				return "BondIssuanceFeeTerm: Invalid term id";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_PERIOD_ID:
+				return "BondIssuanceFeeTerm: Invalid period id";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_NAME:
+				return "BondIssuanceFeeTerm: Invalid name";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_VALUE:
+				return "BondIssuanceFeeTerm: Invalid value";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_AMOUNT:
+				return "BondIssuanceFeeTerm: Invalid amount";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_FEE_DATE:
+				return "BondIssuanceFeeTerm: Invalid fee date";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_BILL_DATE:
+				return "BondIssuanceFeeTerm: Invalid bill date";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_REVENUE_DATE:
+				return "BondIssuanceFeeTerm: Invalid revennue date";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_START_DATE:
+				return "BondIssuanceFeeTerm: Invalid start date";
+			case INVALID_BOND_ISSUANCE_FEE_TERM_END_DATE:
+				return "BondIssuanceFeeTerm: Invalid end date";
+
+			case INVALID_BOND_OTHER_INFOS_BOND_ID:
+				return "BondOtherInfos: Invalid bond id";
+			case INVALID_BOND_OTHER_INFOS_KEY_SUBSIDIARY_DEF:
+				return "BondOtherInfos: Invalid key subsidiary def";
+			case INVALID_BOND_OTHER_INFOS_MATERIAL_ADVERSE_EFFECT_DEF:
+				return "BondOtherInfos: Invalid material adverse effect def";
+			case INVALID_BOND_OTHER_INFOS_REPAYMENT_SOURCE:
+				return "BondOtherInfos: Invalid replayment source";
+			case INVALID_BOND_OTHER_INFOS_ADDITIONNAL_ISSUE_REQUIREMENT:
+				return "BondOtherInfos: Invalid additionnal issue requirement";
+			case INVALID_BOND_OTHER_INFOS_OTHERS:
+				return "BondOtherInfos: Invalid others";
+
+			case INVALID_BOND_TNC_BOND_ID:
+				return "BondTermAndCondition: Invalid bond id";
+			case INVALID_BOND_TNC_ISSUANCE_FORM:
+				return "BondTermAndCondition: Invalid issuance form";
+			case INVALID_BOND_TNC_ISSUANCE_METHOD:
+				return "BondTermAndCondition: Invalid issuance method";
+			case INVALID_BOND_TNC_SENIORITY:
+				return "BondTermAndCondition: Invalid seniority";
+			case INVALID_BOND_TNC_LISTING_REQUIREMENT:
+				return "BondTermAndCondition: Invalid listing requirement";
+			case INVALID_BOND_TNC_EQUITY_LINKED_DESC:
+				return "BondTermAndCondition: Invalid equtity linked desc";
+
+			case INVALID_BOND_UOP_BOND_ID:
+				return "BondUOP: Invalid bond id";
+			case INVALID_BOND_UOP_DETAIL:
+				return "BondUOP: Invalid detail";
+			case INVALID_BOND_UOP_DUE_DILIGENCE_DOCUMMENTS:
+				return "BondUOP: Invalid due diligence documments";
+			case INVALID_BOND_UOP_DISBURSEMENT_CPS:
+				return "BondUOP: Invalid disbursement cps";
+			case INVALID_BOND_UOP_POST_ISSUE_REPORT:
+				return "BondUOP: Invalid post issue report";
+
+			case INVALID_BOND_SECURED_ASSET_ID:
+				return "BondSecuredAsset: Invalid id";
+			case INVALID_BOND_SECURED_ASSET_BOND_ID:
+				return "BondSecuredAsset: Invalid bond id";
+			case INVALID_BOND_SECURED_ASSET_SECURED_ASSET_NAME:
+				return "BondSecuredAsset: Invalid secured asset name";
+			case INVALID_BOND_SECURED_ASSET_TYPE_LEVEL1:
+				return "BondSecuredAsset: Invalid secured asset type level 1";
+			case INVALID_BOND_SECURED_ASSET_TYPE_LEVEL2:
+				return "BondSecuredAsset: Invalid secured asset type level 2";
+			case INVALID_BOND_SECURED_ASSET_ASSET_DESC:
+				return "BondSecuredAsset: Invalid secured asset description";
+			case INVALID_BOND_SECURED_ASSET_VALUE_AT_ISSUE_DETERMINANT:
+				return "BondSecuredAsset: Invalid secured asset value at issue determinant";
+			case INVALID_BOND_SECURED_ASSET_MINIMUM_SECURITY_RATIO:
+				return "BondSecuredAsset: Invalid secured asset minimum security ratio";
+			case INVALID_BOND_SECURED_ASSET_SECURING_RATIO_DETERMINANT:
+				return "BondSecuredAsset: Invalid secured asset securing ratio determinant";
+			case INVALID_BOND_SECURED_ASSET_SECURING_RATIO:
+				return "BondSecuredAsset: Invalid secured asset securing ratio";
+			case INVALID_BOND_SECURED_ASSET_APPRAISED_VALUE:
+				return "BondSecuredAsset: Invalid secured asset appraiser";
+			case INVALID_BOND_SECURED_ASSET_SHARE_TYPE:
+				return "BondSecuredAsset: Invalid secured asset share type";
+			case INVALID_BOND_SECURED_ASSET_SHARE_QUANTITY:
+				return "BondSecuredAsset: Invalid secured asset share quantity";
+			case INVALID_BOND_SECURED_ASSET_SHARE_PAR_VALUE:
+				return "BondSecuredAsset: Invalid secured asset share par value";
+			case INVALID_BOND_SECURED_ASSET_SHARE_MARKET_VALUE:
+				return "BondSecuredAsset: Invalid secured asset share market value";
+			case INVALID_BOND_SECURED_ASSET_CAPITAL_BOOK_VALUE:
+				return "BondSecuredAsset: Invalid secured asset capital book value";
+			case INVALID_BOND_SECURED_ASSET_RATIO_NOTE:
+				return "BondSecuredAsset: Invalid secured asset ratio note";
+			case INVALID_BOND_SECURED_ASSET_DEPOSITORY_ACCOUNT:
+				return "BondSecuredAsset: Invalid secured asset depository account";
+			case INVALID_BOND_SECURED_ASSET_BOND_ASSET_APPRAISER_DESC:
+				return "BondSecuredAsset: Invalid secured asset appraiser desc";
+
+			case INVALID_BOND_TNC_TYPE_INPUT:
+				return "BondTNCType: is null";
+			case INVALID_BOND_TNC_TYPE_BOND_ID:
+				return "BondTNCType: Invalid bond id";
+			case INVALID_BOND_TNC_TYPE_TNC_TYPE:
+				return "BondTNCType: Invalid TNC type id";
+			case INVALID_BOND_UOP_TYPE_INPUT:
+				return "BondUOPType: is null";
+			case INVALID_BOND_UOP_TYPE_BOND_ID:
+				return "BondUOPType: Invalid bond id";
+			case INVALID_BOND_UOP_TYPE_UOP_TYPE:
+				return "BondUOPType: Invalid UOP type id";
+
+			case INVALID_BOND_ISSUANCE_DISTRIBUTION_ID:
+				return "BondIssuaceDistribution: Invalid distribution id";
+			case INVALID_BOND_ISSUANCE_DISTRIBUTION_DISTRIBUTION_TYPE_ID:
+				return "BondIssuaceDistribution: Invalid distribution type";
+			case INVALID_BOND_ISSUANCE_DISTRIBUTION_INVESTOR_COMPANY_ID:
+				return "BondIssuaceDistribution: Invalid investor company";
+			case INVALID_BOND_ISSUANCE_DISTRIBUTION_INVESTOR_GROUP_ID:
+				return "BondIssuaceDistribution: Invalid investor group";
+			case INVALID_BOND_ISSUANCE_DISTRIBUTION_SUBSCRIPTION_TYPE_ID:
+				return "BondIssuaceDistribution: Invalid subcription type";
+			case INVALID_BOND_ISSUANCE_DISTRIBUTION_SUBSCRIPTION_AMOUNT:
+				return "BondIssuaceDistribution: Invalid subcription amount";
+			case INVALID_BOND_ISSUANCE_DISTRIBUTION_TENTATIVE_SUBSCRIPTION_DATE:
+				return "BondIssuaceDistribution: Invalid tentative subscription date";
+			case INVALID_BOND_ISSUANCE_DISTRIBUTION_INVESTOR_PIC_ID:
+				return "BondIssuaceDistribution: Invalid investor pic id";
+			case INVALID_BOND_ISSUANCE_DISTRIBUTION_INVESTOR_TCBS_PIC_ID:
+				return "BondIssuaceDistribution: Invalid investor tcbs pic id";
+
+			case INVALID_BOND_DISTRIBUTION_WAREHOUSE_ID:
+				return "BondDistributionWarehouse: Invalid warehouse id";
+			case INVALID_BOND_DISTRIBUTION_WAREHOUSE_COMPANY_ID:
+				return "BondDistributionWarehouse: Invalid warehouse company";
+			case INVALID_BOND_DISTRIBUTION_WAREHOUSE_INVESTOR_GROUP_ID:
+				return "BondDistributionWarehouse: Invalid investor group";
+			case INVALID_BOND_DISTRIBUTION_WAREHOUSE_SUBSCRIPTION_TYPE_ID:
+				return "BondDistributionWarehouse: Invalid subscription type";
+			case INVALID_BOND_DISTRIBUTION_WAREHOUSE_SUBSCRIPTION_AMOUNT:
+				return "BondDistributionWarehouse: Invalid subscription amount";
+			case INVALID_BOND_DISTRIBUTION_WAREHOUSE_TENTATIVE_SUBSCRIPTION_DATE:
+				return "BondDistributionWarehouse: Invalid tentative subscription date";
+			case INVALID_BOND_DISTRIBUTION_WAREHOUSE_TENTATIVE_TRANSFER_DATE:
+				return "BondDistributionWarehouse: Invalid tentative transfer date";
+			case INVALID_BOND_DISTRIBUTION_WAREHOUSE_PIC_ID:
+				return "BondDistributionWarehouse: Invalid warehouse pic id";
+			case INVALID_BOND_DISTRIBUTION_WAREHOUSE_TCBS_PIC_ID:
+				return "BondDistributionWarehouse: Invalid warehouse tcbs pic id";
+
+			case INVALID_BOND_LISTING_ID:
+				return "BondListing: Invalid id";
+			case INVALID_BOND_LISTING_BOND_ID:
+				return "BondListing: Invalid bond id";
+			case INVALID_BOND_LISTING_STATUS:
+				return "BondListing: Invalid listing status";
+			case INVALID_BOND_LISTING_TRADING_STATUS:
+				return "BondListing: Invalid listing trading status";
+			case INVALID_BOND_LISTING_EXCHANGE:
+				return "BondListing: Invalid listing exchange";
+			case INVALID_BOND_LISTING_VSD_EXCHANGE:
+				return "BondListing: Invalid listing vsd exchange";
+			case INVALID_BOND_LISTING_STOCK_EXCHANGE_STATUS:
+				return "BondListing: Invalid listing stock exchange status";
+			case INVALID_BOND_LISTING_CODE:
+				return "BondListing: Invalid listing code";
+			case INVALID_BOND_LISTING_ISIN_CODE:
+				return "BondListing: Invalid listing isin code";
+
+			case INVALID_COMPANY_EMPLOYEE_TITLE_ID:
+				return "CompanyEmployeeTitle: Invalid id";
+			case INVALID_COMPANY_EMPLOYEE_TITLE_EMPLOYEE_ID:
+				return "CompanyEmployeeTitle: Invalid employee id";
+			case INVALID_COMPANY_EMPLOYEE_TITLE_TITLE:
+				return "CompanyEmployeeTitle: Invalid title";
+			case INVALID_COMPANY_EMPLOYEE_TITLE_DEPARTMENT:
+				return "CompanyEmployeeTitle: Invalid department";
+
+			case INVALID_COMPANY_EMPLOYEE_OTHER_ID:
+				return "CompanyEmployeeTitleOther: Invalid id";
+			case INVALID_COMPANY_EMPLOYEE_OTHER_TITLE:
+				return "CompanyEmployeeTitleOther: Invalid title";
+
+			case INVALID_BOND_COUPON_DETAIL_ID:
+				return "BondCouponDetail: Invalid id";
+			case INVALID_BOND_COUPON_DETAIL_BOND_ID:
+				return "BondCouponDetail: Invalid bond id";
+			case INVALID_BOND_COUPON_DETAIL_COUPON_TYPE_ID:
+				return "BondCouponDetail: Invalid coupon type id";
+			case INVALID_BOND_COUPON_DETAIL_COUPON_PERIOD_TYPE_ID:
+				return "BondCouponDetail: Invalid coupon period type id";
+			case INVALID_BOND_COUPON_DETAIL_NUMBER_OF_FIXED_PERIOD:
+				return "BondCouponDetail: Invalid number of fixed period";
+			case INVALID_BOND_COUPON_DETAIL_COUPON_SPREAD:
+				return "BondCouponDetail: Invalid coupon spread";
+
+			case INVALID_BOND_COUPON_REFERENCE_ID:
+				return "BondCouponReference: Invalid id";
+			case INVALID_BOND_COUPON_REFERENCE_BOND_ID:
+				return "BondCouponReference: Invalid bond id";
+			case INVALID_BOND_COUPON_REFERENCE_BANK_CODE:
+				return "BondCouponReference: Invalid bank code";
+			case INVALID_BOND_COUPON_REFERENCE_BRANCH_CODE:
+				return "BondCouponReference: Invalid branch code";
+
+			case INVALID_BOND_FEE_PAYMENT_DETAIL_RATE_CODE:
+				return "BondFeePaymentDetail: Invalid rate";
+			case INVALID_BOND_FEE_PAYMENT_DETAIL_AMOUNT_CODE:
+				return "BondFeePaymentDetail: Invalid amount";
+			case INVALID_BOND_FEE_PAYMENT_DETAIL_PERIOD_STARTDATE:
+				return "BondFeePaymentDetail: Invalid period startdate";
+			case INVALID_BOND_FEE_PAYMENT_DETAIL_PERIOD_ENDDATE:
+				return "BondFeePaymentDetail: Invalid period endate";
+			case INVALID_BOND_FEE_PAYMENT_DETAIL_INVOICE_DATE:
+				return "BondFeePaymentDetail: Invalid invoice date";
+			case INVALID_BOND_FEE_PAYMENT_DETAIL_PAYMENT_DATE:
+				return "BondFeePaymentDetail: Invalid payment date";
+			case INVALID_BOND_FEE_PAYMENT_DETAIL_REVENUE_RECOGNITION_DATE:
+				return "BondFeePaymentDetail: Invalid revenue recognition date";
+			case INVALID_BOND_FEE_PAYMENT_DETAIL_ID:
+				return "BondFeePaymentDetail: Invalid id";
+
+			case INVALID_BOND_FEE_ID:
+				return "BondFee: Invalid fee id";
+			case INVALID_BOND_FEE_TYPE:
+				return "BondFee: Invalid fee type";
+			case INVALID_BOND_FEE_PAYMENT_TYPE:
+				return "BondFee: Invalid fee payment type";
+			case INVALID_BOND_FEE_FREQUENCY_CODE:
+				return "BondFee: Invalid fee frequency";
+			case INVALID_BOND_FEE_TCB_FEE_SHARING:
+				return "BondFee: Invalid fee tcb sharing";
+			case INVALID_BOND_FEE_DESCRIPTION:
+				return "BondFee: Invalid fee description";
+
+			case INVALID_BOND_MECHANISM_ID:
+				return "BondMechanismAsset: Invalid id";
+			case INVALID_BOND_MECHANISM_SECURED_ASSET_ID:
+				return "BondMechanismAsset: Invalid secured asset id";
+			case INVALID_BOND_MECHANISM_ASSET_REVALUATION:
+				return "BondMechanismAsset: Invalid revalution name";
+			case INVALID_BOND_MECHANISM_ASSET_REVALUATION_FREQUENCY:
+				return "BondMechanismAsset: Invalid revaluation frequency";
+			case INVALID_BOND_MECHANISM_REVALUATION_DATE_DETERMINANT:
+				return "BondMechanismAsset: Invalid date determinant";
+			case INVALID_BOND_MECHANISM_REVALUATION_DETERMINANT:
+				return "BondMechanismAsset: Invalid revaluation determinant";
+			case INVALID_BOND_MECHANISM_REVALUATION_OTHER:
+				return "BondMechanismAsset: Invalid revaluation other";
+			case INVALID_BOND_MECHANISM_TOP_UP_CONDITIONS:
+				return "BondMechanismAsset: Invalid top up conditions";
+			case INVALID_BOND_MECHANISM_TOP_DOWN_CONDITIONS:
+				return "BondMechanismAsset: Invalid top down conditions";
+			case INVALID_BOND_MECHANISM_UNDERTAKINGS:
+				return "BondMechanismAsset: Invalid undertakings";
+			case INVALID_BOND_MECHANISM_SHARING:
+				return "BondMechanismAsset: Invalid sharing";
+			case INVALID_BOND_MECHANISM_SHARING_VALUE:
+				return "BondMechanismAsset: Invalid sharing value";
+			case INVALID_BOND_MECHANISM_LIQUIDATION_CONDITIONS:
+				return "BondMechanismAsset: Invalid liquidation conditions";
+			case INVALID_BOND_MECHANISM_LIQUIDATION_OTHER_MANAGEMENT:
+				return "BondMechanismAsset: Invalid liquidation other management";
+			case INVALID_BOND_MECHANISM_REVALUATION_DESCRIPTION:
+				return "BondMechanismAsset: Invalid liquidation revaluation description";
+
+			case INVALID_BOND_GUARANTEE_BOND_ID:
+				return "BondGuarantee: Invalid bond id";
+			case INVALID_BOND_GUARANTEE_VALUE:
+				return "BondGuarantee: Invalid value";
+
+			case INVALID_DICTIONARY_APPLICABLE_PARTY_ID:
+				return "DictionaryApplicableParty: Invalid id";
+			case INVALID_DICTIONARY_APPLICABLE_PARTY_DICTIONARY_DETAIL_ID:
+				return "DictionaryApplicableParty: Invalid dictionary detail id";
+			case INVALID_DICTIONARY_APPLICABLE_PARTY_APPLICABLE_PARTY_TYPE:
+				return "DictionaryApplicableParty: Invalid applicable party type";
+
+			case INVALID_DICTIONARY_LOCATION_ID:
+				return "DictionaryLocation: Invalid id";
+			case INVALID_DICTIONARY_LOCATION_DICTIONARY_DETAIL_ID:
+				return "DictionaryLocation: Invalid dictionary detail id";
+			case INVALID_DICTIONARY_LOCATION_LOCATION_TYPE:
+				return "DictionaryLocation: Invalid location type";
+
+			case INVALID_DICTIONARY_DETAIL_ID:
+				return "DictionaryDetail: Invalid id";
+			case INVALID_DICTIONARY_DETAIL_DICTIONARY_ID:
+				return "DictionaryDetail: Invalid dictionary id";
+			case INVALID_DICTIONARY_DETAIL_NAME:
+				return "DictionaryDetail: Invalid name";
+			case INVALID_DICTIONARY_DETAIL_LOCATION_TYPE:
+				return "DictionaryDetail: Invalid location type";
+			case INVALID_DICTIONARY_DETAIL_GENERAL_DESC:
+				return "DictionaryDetail: Invalid general description";
+			case INVALID_DICTIONARY_DETAIL_DETAIL_DESC:
+				return "DictionaryDetail: Invalid detail description";
+
+			case INVALID_DICTIONARY_INFO_ID:
+				return "DictionaryInfo: Invalid id";
+			case INVALID_DICTIONARY_INFO_DICTIONARY_SET_TYPE:
+				return "DictionaryInfo: Invalid dictionary set type";
+			case INVALID_DICTIONARY_INFO_APPLIED_CUSTOMER_TYPE:
+				return "DictionaryInfo: Invalid applied customer type";
+
+			case INVALID_BOND_PRIMARY_DISTRIBUTION_BOND_ID:
+				return "BondPrimaryDistribution: Invalid bond id";
+			case INVALID_BOND_PRIMARY_DISTRIBUTION_INVESTORS_TYPE:
+				return "BondPrimaryDistribution: Invalid investors type";
+			case INVALID_BOND_PRIMARY_DISTRIBUTION_INVESTORS:
+				return "BondPrimaryDistribution: Invalid investors";
+			case INVALID_BOND_PRIMARY_DISTRIBUTION_INDENTURE_NUMBER:
+				return "BondPrimaryDistribution: Invalid indenture number";
+			case INVALID_BOND_PRIMARY_DISTRIBUTION_QUANTITY:
+				return "BondPrimaryDistribution: Invalid quantity";
+			case INVALID_BOND_PRIMARY_DISTRIBUTION_PAYMENT_DATE:
+				return "BondPrimaryDistribution: Invalid payment date";
+
+			case INVALID_BOND_TNC_OTHER_APPLICABLE_PARTY_APPLICABLE_PARTY_TYPE:
+				return "BondTNCOtherApplParty: Invalid applicablePartyType";
+			case INVALID_BOND_TNC_OTHER_LOCATION_LOCATION_TYPE:
+				return "BondTNCOtherLocation: Invalid locationType";
+
+			case INVALID_BOND_TNC_OTHER_DETAIL_ID:
+				return "BondTNCOtherDetail: Invalid id";
+			case INVALID_BOND_TNC_OTHER_DETAIL_OTHER_INFO_ID:
+				return "BondTNCOtherDetail: Invalid other info id";
+			case INVALID_BOND_TNC_OTHER_DETAIL_NAME:
+				return "BondTNCOtherDetail: Invalid name";
+			case INVALID_BOND_TNC_OTHER_DETAIL_LOCATION_TYPE:
+				return "BondTNCOtherDetail: Invalid location type";
+			case INVALID_BOND_TNC_OTHER_DETAIL_GENERAL_DESC:
+				return "BondTNCOtherDetail: Invalid general description";
+			case INVALID_BOND_TNC_OTHER_DETAIL_DETAIL_DESC:
+				return "BondTNCOtherDetail: Invalid detail description";
+			case INVALID_BOND_TNC_OTHER_DETAIL_ORDER_BY:
+				return "BondTNCOtherDetail: Invalid order by";
+
+			case INVALID_BOND_TNC_OTHER_INFO_ID:
+				return "BondTNCOtherInfo: Invalid id";
+			case INVALID_BOND_TNC_OTHER_INFO_NAME:
+				return "BondTNCOtherInfo: Invalid name";
+			case INVALID_BOND_TNC_OTHER_INFO_TYPE:
+				return "BondTNCOtherInfo: Invalid tyoe";
+			case INVALID_BOND_TNC_OTHER_INFO_APPLIED_CUSTOMER_TYPE:
+				return "BondTNCOtherInfo: Invalid appied customer type";
+
+			case INVALID_BOND_TERM_OTHER_TERM_ID:
+				return "BondTermOther: Invalid term id";
+			case INVALID_BOND_TERM_OTHER_DEAL_ID:
+				return "BondTermOther: Invalid deal id";
+			case INVALID_BOND_TERM_OTHER_CONTENT_DEAL_ID:
+				return "BondTermOtherContent: Invalid deal id";
+			case INVALID_BOND_TERM_OTHER_CONTENT_TERM_ID:
+				return "BondTermOtherContent: Invalid term id";
+			case INVALID_BOND_TERM_OTHER_CONTENT_NAME:
+				return "BondTermOtherContent: Invalid term name";
+
+			case INVALID_TERMSHEET_ID:
+				return "Temrsheet: Invalid termsheet id";
+			case INVALID_TERMSHEET_PROCESS_ID:
+				return "Temrsheet: Invalid temrsheet process id";
+			case INVALID_TERMSHEET_DEAL_ID:
+				return "Temrsheet: Invalid temrsheet case or bond id";
+			case INVALID_TERMSHEET_VERSION_NOTE_DATE:
+				return "Temrsheet: Invalid temrsheet version note date";
+
+			case INVALID_CASE_DISBURSEMENT_PROGRESS_ID:
+				return "CaseDisbursementProgress: Invalid id";
+			case INVALID_CASE_DISBURSEMENT_PROGRESS_CASE_ID:
+				return "CaseDisbursementProgress: Invalid case id";
+			case INVALID_CASE_DISBURSEMENT_PROGRESS_DISBURSEMENT_DATE:
+				return "CaseDisbursementProgress: Invalid disbursement date";
+			case INVALID_CASE_DISBURSEMENT_PROGRESS_QUANTITY:
+				return "CaseDisbursementProgress: Invalid quantity";
+
+			case INVALID_PROJECT_BASE_INFO_ID:
+				return "ProjectBaseInfo: Invalid id";
+			case INVALID_PROJECT_BASE_INFO_DEVELOPER:
+				return "ProjectBaseInfo: Invalid developer";
+			case INVALID_PROJECT_BASE_INFO_PROJECT_NAME:
+				return "ProjectBaseInfo: Invalid project name";
+			case INVALID_PROJECT_BASE_INFO_PROJECT_CODE:
+				return "ProjectBaseInfo: Invalid project code";
+			case INVALID_PROJECT_BASE_INFO_ADDRESS_PROVINCE:
+				return "ProjectBaseInfo: Invalid address province";
+			case INVALID_PROJECT_BASE_INFO_ADDRESS_DISTRICT:
+				return "ProjectBaseInfo: Invalid address district";
+			case INVALID_PROJECT_BASE_INFO_ADDRESS_LINE1:
+				return "ProjectBaseInfo: Invalid address line1";
+			case INVALID_PROJECT_BASE_INFO_OTHER_DESC:
+				return "ProjectBaseInfo: Invalid other desc";
+			case INVALID_PROJECT_BASE_INFO_LAND_AREA:
+				return "ProjectBaseInfo: Invalid land area";
+			case INVALID_PROJECT_BASE_INFO_AREA_METRIC_TYPE:
+				return "ProjectBaseInfo: Invalid area metric type";
+			case INVALID_PROJECT_BASE_INFO_LAND_GFA:
+				return "ProjectBaseInfo: Invalid land GFA";
+			case INVALID_PROJECT_BASE_INFO_LAND_NSA:
+				return "ProjectBaseInfo: Invalid land NSA";
+			case INVALID_PROJECT_BASE_INFO_LAND_NOTE:
+				return "ProjectBaseInfo: Invalid land note";
+
+			case INVALID_PROJECT_PROGRESS_ID:
+				return "ProjectProgress: Invalid id";
+			case INVALID_PROJECT_PROGRESS_START_TIME:
+				return "ProjectProgress: Invalid start time";
+			case INVALID_PROJECT_PROGRESS_HANDOVER_TIME:
+				return "ProjectProgress: Invalid handover time";
+			case INVALID_PROJECT_PROGRESS_PROGRESS_TYPE:
+				return "ProjectProgress: Invalid progress type";
+			case INVALID_PROJECT_PROGRESS_LEAGAL_STATUS:
+				return "ProjectProgress: Invalid legal status";
+
+			case INVALID_PROJECT_FORM_TYPE:
+				return "ProjectFormType: Invalid project form type";
+
+			case INVALID_PROJECT_LAND_LEGAL_ID:
+				return "ProjectLandLegal: Invalid id";
+			case INVALID_PROJECT_LAND_LEGAL_PROJECT_ID:
+				return "ProjectLandLegal: Invalid project id";
+			case INVALID_PROJECT_LAND_LEGAL_LAND_LEGAL_DOC_NAME_TYPE:
+				return "ProjectLandLegal: Invalid land legal doc name type";
+			case INVALID_PROJECT_LAND_LEGAL_ISSUED_BY_PROVINCE:
+				return "ProjectLandLegal: Invalid issued by province";
+			case INVALID_PROJECT_LAND_LEGAL_ISSUED_BY_DISTRICT:
+				return "ProjectLandLegal: Invalid issued by district";
+			case INVALID_PROJECT_LAND_LEGAL_DOC_NO:
+				return "ProjectLandLegal: Invalid doc no";
+			case INVALID_PROJECT_LAND_LEGAL_DOC_DATE:
+				return "ProjectLandLegal: Invalid doc date";
+			case INVALID_PROJECT_LAND_LEGAL_DOC_NOTE:
+				return "ProjectLandLegal: Invalid doc note";
+			case INVALID_PROJECT_LAND_LEGAL_IS_LAND_LEGAL_PRIMARY:
+				return "ProjectLandLegal: Invalid is land legal primary";
+			case INVALID_PROJECT_LAND_LEGAL_ISSUED_BY:
+				return "ProjectLandLegal: Invalid issued by";
+
+			case INVALID_PROJECT_LEGAL_ID:
+				return "ProjectLegal: Invalid id";
+			case INVALID_PROJECT_LEGAL_PROJECT_ID:
+				return "ProjectLegal: Invalid project id";
+			case INVALID_PROJECT_LEGAL_DOC_NAME_TYPE:
+				return "ProjectLegal: Invalid legal doc name type";
+			case INVALID_PROJECT_LEGAL_ISSUED_BY_PROVINCE:
+				return "ProjectLegal: Invalid issued by province";
+			case INVALID_PROJECT_LEGAL_ISSUED_BY_DISTRICT:
+				return "ProjectLegal: Invalid issued by district";
+			case INVALID_PROJECT_LEGAL_DOC_NO:
+				return "ProjectLegal: Invalid doc no";
+			case INVALID_PROJECT_LEGAL_DOC_DATE:
+				return "ProjectLegal: Invalid doc date";
+			case INVALID_PROJECT_LEGAL_DOC_NOTE:
+				return "ProjectLegal: Invalid doc note";
+			case INVALID_PROJECT_LEGAL_IS_LEGAL_PRIMARY:
+				return "ProjectLegal: Invalid is legal primary";
+
+			case INVALID_PROJECT_LAND_LOT_INFO_ID:
+				return "ProjectLanLotInfo: Invalid id";
+			case INVALID_PROJECT_LAND_LOT_INFO_PROJECT_ID:
+				return "ProjectLanLotInfo: Invalid project id";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_NAME:
+				return "ProjectLanLotInfo: Invalid land name";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_TYPE:
+				return "ProjectLanLotInfo: Invalid land lot type";
+			case INVALID_PROJECT_LAND_LOT_INFO_ADDRESS_PROVINCE:
+				return "ProjectLanLotInfo: Invalid addredd province";
+			case INVALID_PROJECT_LAND_LOT_INFO_ADDRESS_DISTRICT:
+				return "ProjectLanLotInfo: Invalid address district";
+			case INVALID_PROJECT_LAND_LOT_INFO_ADDRESS_LINE1:
+				return "ProjectLanLotInfo: Invalid address line1";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_GROUP_TYPE:
+				return "ProjectLanLotInfo: Invalid land lot group type";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_OWNERSHIP_TYPE:
+				return "ProjectLanLotInfo: Invalid land lot ownership type";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_EXPIRY_DATE_TYPE:
+				return "ProjectLanLotInfo: Invalid land lot expiry date type";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_EXPIRY_DATE_NUMBER:
+				return "ProjectLanLotInfo: Invalid land lot expiry date number";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_NO:
+				return "ProjectLanLotInfo: Invalid land lot no";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_MAP_NO:
+				return "ProjectLanLotInfo: Invalid land lot map no";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_AREA:
+				return "ProjectLanLotInfo: Invalid land lot area";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_LOT_USE_TYPE:
+				return "ProjectLanLotInfo: Invalid land lot use type";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_NO:
+				return "ProjectLanLotInfo: Invalid land cert no";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_DATE:
+				return "ProjectLanLotInfo: Invalid land cert date";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_ISSUE_BY:
+				return "ProjectLanLotInfo: Invalid land cert issue by";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_ISSUE_BY_PROVINCE:
+				return "ProjectLanLotInfo: Invalid land cert issue by provine";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_CERT_ISSUE_BY_DISTRICT:
+				return "ProjectLanLotInfo: Invalid land cert district";
+			case INVALID_PROJECT_LAND_LOT_INFO_LAND_BOOK_RECORD_NO:
+				return "ProjectLanLotInfo: Invalid land book record no";
+
+			case INVALID_PROJECT_LAND_LOT_PURPOSE_ID:
+				return "ProjectLandLotPurpose: Invalid id";
+			case INVALID_PROJECT_LAND_LOT_PURPOSE_LAND_LOT_INFO_ID:
+				return "ProjectLandLotPurpose: Invalid land lot info id";
+			case INVALID_PROJECT_LAND_LOT_PURPOSE_LAND_LOT_USE_PURPOSE_TYPE:
+				return "ProjectLandLotPurpose: Invalid land lot use purpose type";
+			case INVALID_PROJECT_LAND_LOT_PURPOSE_PURPOSE_AREA:
+				return "ProjectLandLotPurpose: Invalid purpose area";
+
+			case INVALID_SUBPROJECT_LEGAL_ID:
+				return "ProjectSubprojectLegal: Invalid id";
+			case INVALID_SUBPROJECT_LEGAL_PROJECT_LEGAL_DOC_NAME:
+				return "ProjectSubprojectLegal: Invalid legal doc name type";
+			case INVALID_SUBPROJECT_LEGAL_ISSUED_BY_TYPE:
+				return "ProjectSubprojectLegal: Invalid issued by type";
+			case INVALID_SUBPROJECT_LEGAL_ISSUED_BY_PROVINCE:
+				return "ProjectSubprojectLegal: Invalid issued by province";
+			case INVALID_SUBPROJECT_LEGAL_ISSUED_BY_DISTRICT:
+				return "ProjectSubprojectLegal: Invalid issued by district";
+			case INVALID_SUBPROJECT_LEGAL_DOC_NO:
+				return "ProjectSubprojectLegal: Invalid doc no";
+			case INVALID_SUBPROJECT_LEGAL_DOC_DATE:
+				return "ProjectSubprojectLegal: Invalid doc type";
+			case INVALID_SUBPROJECT_LEGAL_DOC_NOTE:
+				return "ProjectSubprojectLegal: Invalid doc note";
+
+			case INVALID_SUBPROJECT_INFO_ID:
+				return "ProjectSubprojectInfo: Invalid id";
+			case INVALID_SUBPROJECT_INFO_NAME:
+				return "ProjectSubprojectInfo: Invalid name";
+			case INVALID_SUBPROJECT_INFO_DESC:
+				return "ProjectSubprojectInfo: Invalid desc";
+			case INVALID_SUBPROJECT_INFO_LAND_AREA:
+				return "ProjectSubprojectInfo: Invalid land area";
+			case INVALID_SUBPROJECT_INFO_GFA:
+				return "ProjectSubprojectInfo: Invalid GFA";
+			case INVALID_SUBPROJECT_INFO_NSA:
+				return "ProjectSubprojectInfo: Invalid NSA";
+			case INVALID_SUBPROJECT_INFO_NOTE:
+				return "ProjectSubprojectInfo: Invalid note";
+
+			case INVALID_PROJECT_ACCOUNT_ID:
+				return "ProjectAccount: Invalid id";
+			case INVALID_PROJECT_ACCOUNT_ACCOUNT_NAME:
+				return "ProjectAccount: Invalid account name";
+			case INVALID_PROJECT_ACCOUNT_ACCOUNT_NO:
+				return "ProjectAccount: Invalid account number";
+			case INVALID_PROJECT_ACCOUNT_DESCRIPTION:
+				return "ProjectAccount: Invalid account description";
+
+			case INVALID_PROJECT_AGREEMENT_ID:
+				return "ProjectAgreement: Invalid id";
+			case INVALID_PROJECT_AGREEMENT_NAME:
+				return "ProjectAgreement: Invalid agreement name";
+			case INVALID_PROJECT_AGREEMENT_NAME_LENGTH:
+				return "ProjectAgreement: Invalid agreement name length";
+			case INVALID_PROJECT_AGREEMENT_NO_LENGTH:
+				return "ProjectAgreement: Invalid agreement no length";
+			case INVALID_PROJECT_AGREEMENT_NOTE_LENGTH:
+				return "ProjectAgreement: Invalid agreement note length";
+			case INVALID_PROJECT_AGREEMENT_SIGNING_DATE:
+				return "ProjectAgreement: Invalid agreement signing date";
+			case INVALID_PROJECT_AGREEMENT_PARTY_ID:
+				return "ProjectAgreementParty: Invalid id";
+
+			case INVALID_CASE_INFO_CASE_ID:
+				return "CaseInfo: Invalid id";
+			case INVALID_CASE_INFO_CASE_NAME:
+				return "CaseInfo: Invalid case name";
+			case INVALID_CASE_INFO_ISSUER:
+				return "CaseInfo: Invalid issuer";
+			case INVALID_CASE_INFO_QUANTITY:
+				return "CaseInfo: Invalid quantity";
+			case INVALID_CASE_INFO_DEAL_SUPERVISOR:
+				return "CaseInfo: Invalid deal supervisor";
+			case INVALID_CASE_INFO_DEAL_OWNER:
+				return "CaseInfo: Invalid deal owner";
+			case INVALID_CASE_INFO_DEAL_SUPPORTER:
+				return "CaseInfo: Invalid deal supporter";
+			case INVALID_CASE_INFO_DEAL_SPECIALIST:
+				return "CaseInfo: Invalid deal specialist";
+			case INVALID_CASE_INFO_DEAL_FOLLOWER:
+				return "CaseInfo: Invalid deal follower";
+			case INVALID_CASE_INFO_ISSUANCE_FORM:
+				return "CaseInfo: Invalid issuance form";
+			case INVALID_CASE_INFO_ISSUANCE_METHOD:
+				return "CaseInfo: Invalid issuance method";
+			case INVALID_CASE_INFO_SENIORITY:
+				return "CaseInfo: Invalid seniority";
+			case INVALID_CASE_INFO_CURRENCY_TYPE:
+				return "CaseInfo: Invalid currency type";
+			case INVALID_CASE_INFO_PAR_VALUE:
+				return "CaseInfo: Invalid par value";
+			case INVALID_CASE_INFO_AMOUNT:
+				return "CaseInfo: Invalid amount";
+			case INVALID_CASE_INFO_CASE_STATUS:
+				return "CaseInfo: Invalid case status";
+			case INVALID_PERSON_INFO_PERSONID:
+				return "RelatedPersonManagement: Invalid person info id";
+			case INVALID_PERSON_INFO_NAME:
+				return "RelatedPersonManagement: Invalid person info name";
+			case INVALID_PERSON_INFO_NAME_NO_ACCENT:
+				return "RelatedPersonManagement: Invalid person info name no accent";
+			case NOT_EXISTS_PERSONID:
+				return "This personId is not exists";
+			case INVALID_PERSONID:
+				return "Invalid personId";
+			case INVALID_DUPLICATE_PERSON:
+				return "Invalid person already existed";
+
+			case INVALID_TEMPLATE_CODE:
+				return "GenDoc: Invalid template code";
+
+			case INVALID_COMPONENT_NAME:
+				return "Project construction: Invalid Component name";
+			case INVALID_COMPONENT_TYPE:
+				return "Project construction: Invalid Component Type, must choose atleast one type";
+			case INVALID_MAX_LENGTH:
+				return "input is out of max lenght";
+
+			case INVALID_DOCUMENT_INFO_CODE:
+				return "DocumentInfo: Invalid doc code";
+			case INVALID_DOCUMENT_INFO_NAME:
+				return "DocumentInfo: Invalid doc name";
+			case INVALID_BOND_REAL_ESTATE_PRJ_SECURED_ASSET:
+				return "Invalid real estate project securef asset";
+			case INVALID_PRJ_CONSTRUCITON_ID:
+				return "Project Construction Info: Invalid Id";
+
+			case INVALID_BOND_TO_SELL_BUILDBOOK_DEADLINE:
+				return "BondToSell: Invalid buildbook deadline";
+			case INVALID_BOND_TO_SELL_PIORITY:
+				return "BondToSell: Invalid piority type";
+			case INVALID_BOND_TO_SELL_NOTE:
+				return "BondToSell: Invalid note";
+
+			case INVALID_BOND_EXPOSE_AMOUNT_DETAIL_INVESTER_TYPE:
+				return "BondExposeAmountDetail: Invalid invester type";
+			case INVALID_BOND_EXPOSE_AMOUNT_DETAIL_AMOUNT:
+				return "BondExposeAmountDetail: Invalid amount";
+			case INVALID_COMPONENT_LANDAREA:
+				return "Prj construction: Invalid landarea";
+			case INVALID_COMPONENT_NSA:
+				return "Prj construction: Invalid nsa";
+			case INVALID_COMPONENT_GFA:
+				return "Prj construction: Invalid gfa";
+			case INVALID_COMPONENT_OTHER_DESC:
+				return "Prj construction: Invalid other desc";
+			case BOND_FUNDED_PRJ_INVALID_BONDID:
+				return "Bond funded projects: Invalid bondid";
+			case BOND_FUNDED_PRJ_INVALID_PRJ_TYPE:
+				return "Bond funded projects: Invalid prj type";
+			case BOND_FUNDED_PRJ_INVALID_PRJ_ID:
+				return "Bond funded projects: Invalid prj id";
+			case BOND_FUNDED_PRJ_INVALID_MAXLENGTH:
+				return "Bond funded projects: Invalid max length of fund details";
+			case INVALID_BOND_ISSUE_EXPECTED_DATE:
+				return "Bond base info : Invalid issue expected date ";
+			case INVALID_BOND_MAXIMUM_AMOUNT:
+				return "Bond base info : Invalid maximum amount ";
+			case INVALID_BOND_MAXIMUM_AMOUNT_LENGTH:
+				return "Bond base info : Invalid max length of maximum amount ";
+			case INVALID_BOND_STATUS:
+				return "Bond base info : Invalid status ";
+			case NOT_EXISTS_BONDID_BOND_PRIMARY_DISTRIBUTION:
+				return "This id is not exists ";
+			case INVALID_BOND_TEMP_ID:
+				return "This bond temp id is not exists ";
+			case BOND_IS_ACTIVE:
+				return "This bond is the active state ";
+			case ERROR_ISSUED_BONDS:
+				return "This bond has been issued and issued date not null";
+			case BOND_IS_INACTIVE:
+				return "This bond is the inactive state";
+			case CASE_INACTIVE:
+					return "This case is the inactive state";
+			case CASE_NOT_EXISTS:
+					return "This case is not exists";
+			default:
+				return String.format("(%s)", errorCode);
+			}
+		}
+	}
+	
+	public static final String EXCEPTION = "Exception";
+}
