@@ -1,4 +1,4 @@
-package crawl.dgts;
+package crawler.dgts.controllers;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
