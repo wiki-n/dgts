@@ -12,7 +12,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProvinceDto {
-	private String provinceId;
-	private String provinceName;
-	private String provinceCode;
+	private int code;
+	private String name;
 }

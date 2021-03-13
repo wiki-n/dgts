@@ -20,13 +20,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CrawlerBasicDataController extends DCMBaseController {
 
-	@RequestMapping(value = "/province", method = RequestMethod.POST,produces = MediaType.APPLICATION_JSON_VALUE)
-	@ApiOperation(value = "Get All Provinces", tags = "Province", nickname = "/province POST")
-    @ApiResponses(value = {@ApiResponse(code = 200, message = "Success", response = ProvinceDto[].class),
+	@RequestMapping(value = "/district", method = RequestMethod.POST,produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "Get All Districts", tags = "Province/District", nickname = "/cloneDistrictDgts")
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "Success", response = DCMResponse.class),
             @ApiResponse(code = 400, message = "Internal Server Error", response = DCMResponse.class),
             @ApiResponse(code = 404, message = "Internal Server Error", response = DCMResponse.class),
             @ApiResponse(code = 500, message = "Internal Server Error", response = DCMResponse.class)})
-	public ResponseEntity<Object> crawlAllProvinces() {
+	public ResponseEntity<Object> crawlAllDistricts() {
 		return null;
 		
 	}
