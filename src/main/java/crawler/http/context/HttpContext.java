@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.ning.http.client.AsyncHttpClient;
 import com.ning.http.client.AsyncHttpClientConfig;
+import com.ning.http.client.ProxyServer;
 import com.ning.http.client.providers.netty.NettyAsyncHttpProvider;
 import com.ning.http.client.providers.netty.NettyAsyncHttpProviderConfig;
 
@@ -41,6 +42,8 @@ public class HttpContext {
 		multiCm.setParams(hmcp);
 		NettyAsyncHttpProviderConfig nettyConfig = new NettyAsyncHttpProviderConfig();
 		AsyncHttpClientConfig.Builder builder = new AsyncHttpClientConfig.Builder();
+		ProxyServer proxy = new ProxyServer("127.0.0.1", 5566);
+		builder.setProxyServer(proxy);
 		builder.setMaxRequestRetry(0);
 		builder.setAsyncHttpClientProviderConfig(nettyConfig);
 		builder.setConnectTimeout(connectionTimeout * 1000);
