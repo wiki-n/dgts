@@ -9,6 +9,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * @author phamd
+ *
+ */
 @SpringBootApplication
 @ComponentScan({"crawler.configs", "crawler.dgts", "crawler.dgts.repository", "crawler.dgts.controllers", "crawler.dgts.services", "crawler.http.context"})
 @EntityScan(basePackages = "crawler.dgts.entity")

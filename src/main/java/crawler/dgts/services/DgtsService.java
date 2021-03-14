@@ -49,7 +49,7 @@ public class DgtsService extends BaseClientService {
 		try {
 			HttpResponse response = httpContext.getHttpUtil().get(url, headers, requestParams);
 			if(response != null && response.isOk()) {
-				String responseString = new String(response.getBody());
+				String responseString = new String(response.getBody(),"UTF8");
 				districts = objectMapper.readValue(responseString, new TypeReference<List<DistrictDto>>() {
 				});
 			}
