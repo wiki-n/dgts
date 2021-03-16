@@ -14,7 +14,7 @@ import com.ning.http.client.providers.netty.NettyAsyncHttpProviderConfig;
 
 @Service
 public class HttpContext {
-	private int connectionTimeout = 3;
+	private int connectionTimeout = 30;
 	private int socketTimeout = 3;
 	private int defaultMaxConnectionPerHost = 10;
 	private int maxTotalConnection = 100;

@@ -19,8 +19,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class DistrictService {
 	@Autowired
-	private ObjectMapper objectMapper;
-	@Autowired
 	private DistrictRepository districtRepository;
 	public DCMResponse saveDistricts(List<DistrictDto> districtDtos) {
 		DCMResponse result = new DCMResponse(AppConstant.ERROR_CODE.OK);

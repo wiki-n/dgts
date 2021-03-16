@@ -14,10 +14,10 @@ public class BaseWebService {
 
 
 	@Value("${crawler.service.apiAuthKey}")
-	private String edcmServiceApiAuthkey;
+	private String crawlerServiceApiAuthkey;
 
 	@Value("${crawler.service.publicKey}")
-	private String edcmServicePublicKey;
+	private String crawlerServicePublicKey;
 
 	public ResponseEntity<Object> generateOK(Object data) {
 		return ResponseEntity.ok(data);
@@ -36,14 +36,14 @@ public class BaseWebService {
 	}
 
 	protected int validateToken(String token) {
-		if (token == null || token.trim().isEmpty() || !token.equals(edcmServiceApiAuthkey))
+		if (token == null || token.trim().isEmpty() || !token.equals(crawlerServiceApiAuthkey))
 			return ERROR_CODE.INVALID_TOKEN;
 
 		return ERROR_CODE.OK;
 	}
 
 	protected int validatePublicToken(String token) {
-		if (token == null || token.trim().isEmpty() || !token.equals(edcmServicePublicKey))
+		if (token == null || token.trim().isEmpty() || !token.equals(crawlerServicePublicKey))
 			return ERROR_CODE.INVALID_TOKEN;
 
 		return ERROR_CODE.OK;

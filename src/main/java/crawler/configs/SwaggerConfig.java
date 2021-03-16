@@ -2,6 +2,7 @@ package crawler.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -35,7 +36,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Crawler Service API")
-                .description("Mô tả các hàm API gọi đến crawler Service.")
+                .description("Mo ta crawler Service.")
                 .version("1.0")
                 .build();
     }

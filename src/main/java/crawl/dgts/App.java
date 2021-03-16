@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -14,13 +15,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  *
  */
 @SpringBootApplication
-@ComponentScan({"crawler.configs", "crawler.dgts", "crawler.dgts.repository", "crawler.dgts.controllers", "crawler.dgts.services", "crawler.http.context"})
+@ComponentScan({"crawler.configs", "crawler.dgts","crawl.dgts", "crawler.dgts.repository",
+		"crawler.dgts.controllers", "crawler.dgts.services", "crawler.http.context", "crawler.dgts.utils"})
 @EntityScan(basePackages = "crawler.dgts.entity")
 @EnableJpaRepositories(basePackages = "crawler.dgts.repository")
 @EnableSwagger2
 @EnableAspectJAutoProxy
+@PropertySource("file:src/main/resources/application.properties")
 public class App {
-    public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(App.class, args);
+	}
 }
