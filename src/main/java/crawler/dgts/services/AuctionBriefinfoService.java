@@ -46,8 +46,8 @@ public class AuctionBriefinfoService extends BaseClientService {
 		try {
 			auctionBriefRepository.saveAll(insertBriefEntyties);
 		} catch (IllegalArgumentException e) {
-			log.info("AuctionBriefinfoService saveAuctionBriefInfo error ", e);
-			log.info("AuctionBriefinfoService saveAuctionBriefInfo error ", insertBriefEntyties);
+			log.info("AuctionBriefinfoService saveAuctionBriefInfo error "+ e);
+			log.info("AuctionBriefinfoService saveAuctionBriefInfo error "+ insertBriefEntyties);
 			response = new DCMResponse(AppConstant.ERROR_CODE.INTERNAL_SERVER_ERROR);
 		}
 		return response;

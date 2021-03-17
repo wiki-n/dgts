@@ -57,7 +57,7 @@ public class AuctionService extends BaseClientService {
 				});
 			}
 		} catch (IOException e) {
-			log.info("DgtsService getDistrictByProvinceCode failed ", e);
+			log.info("DgtsService getDistrictByProvinceCode failed "+ e);
 		}
 		return districts;
 	}
@@ -83,10 +83,10 @@ public class AuctionService extends BaseClientService {
 			if (response != null && response.isOk()) {
 				String responseString = new String(response.getBody(), "UTF8");
 				result = objectMapper.readValue(responseString, AuctionSearchResult.class);
-				log.info("DgtsService getAuctionNoticeList result ", JsonService.writeToStringWithoutException(result));
+				log.info("DgtsService getAuctionNoticeList page "+ searchInput.getP());
 			}
 		} catch (IOException e) {
-			log.info("DgtsService getAuctionNoticeList failed ", e);
+			log.info("DgtsService getAuctionNoticeList failed "+ e);
 		}
 		return result;
 	}
@@ -107,13 +107,13 @@ public class AuctionService extends BaseClientService {
 				result = objectMapper.readValue(responseString, AuctionSearchResult.class);
 				if (!result.getItems().isEmpty()) {
 					auction = (AuctionPropertySpecifiedInfoDto) result.getItems().get(0);
-					log.info("DgtsService getAuctionSpecifiedInfoById aution info auction Id ", auction);
+					log.info("DgtsService getAuctionSpecifiedInfoById aution info auction Id "+ auction);
 				} else {
-					log.info("DgtsService getAuctionSpecifiedInfoById empty info auction Id ", aucId);
+					log.info("DgtsService getAuctionSpecifiedInfoById empty info auction Id "+ aucId);
 				}
 			}
 		} catch (IOException e) {
-			log.info("DgtsService getDistrictByProvinceCode failed ", e);
+			log.info("DgtsService getDistrictByProvinceCode failed "+ e);
 		}
 		return auction;
 	}

@@ -1,0 +1,171 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.0)
+
+2021-03-17 23:39:17.925  INFO 11368 --- [           main] crawl.dgts.App                           : Starting App using Java 15.0.2 on DESKTOP-MBP38F3 with PID 11368 (F:\2.Projects\dgts\target\classes started by phamd in F:\2.Projects\dgts)
+2021-03-17 23:39:17.930  INFO 11368 --- [           main] crawl.dgts.App                           : No active profile set, falling back to default profiles: default
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.reflection.CachedClass (file:/C:/Users/phamd/.m2/repository/org/codehaus/groovy/groovy/2.5.13/groovy-2.5.13.jar) to method java.lang.Object.finalize()
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.reflection.CachedClass
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2021-03-17 23:39:19.597  INFO 11368 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-17 23:39:19.804  INFO 11368 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 190 ms. Found 5 JPA repository interfaces.
+2021-03-17 23:39:22.105  INFO 11368 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-17 23:39:22.137  INFO 11368 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-17 23:39:22.137  INFO 11368 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-03-17 23:39:22.387  INFO 11368 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-17 23:39:22.387  INFO 11368 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4037 ms
+2021-03-17 23:39:22.960  INFO 11368 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-17 23:39:23.327  INFO 11368 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2021-03-17 23:39:23.632  INFO 11368 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-03-17 23:39:23.963  INFO 11368 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-17 23:39:25.049  INFO 11368 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-17 23:39:25.084  INFO 11368 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2021-03-17 23:39:26.278  INFO 11368 --- [           main] org.hibernate.search.engine.Version      : HSEARCH000034: Hibernate Search 5.11.5.Final
+2021-03-17 23:39:27.738  INFO 11368 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-17 23:39:27.860  INFO 11368 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-17 23:39:28.798  WARN 11368 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-17 23:39:29.075  INFO 11368 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-17 23:39:29.399  INFO 11368 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-17 23:39:29.400  INFO 11368 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-17 23:39:29.429  INFO 11368 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-17 23:39:29.457  INFO 11368 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-17 23:39:29.685  INFO 11368 --- [           main] crawl.dgts.App                           : Started App in 12.554 seconds (JVM running for 13.837)
+2021-03-17 23:40:49.064  INFO 11368 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-17 23:40:49.064  INFO 11368 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-17 23:40:49.065  INFO 11368 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-17 23:40:54.948  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:01.955  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:06.470  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:11.231  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:16.039  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:20.696  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:25.485  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:30.669  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:35.266  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:39.923  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:44.265  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:49.231  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:53.892  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:41:59.141  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:03.760  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:08.160  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:12.929  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:17.668  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:22.022  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:26.562  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:31.256  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:35.992  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:40.964  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:45.828  INFO 11368 --- [nio-8080-exec-2] crawler.dgts.services.AuctionService     : DgtsService getAuctionNoticeList page 
+2021-03-17 23:42:53.482  WARN 11368 --- [nio-8080-exec-2] c.http.context.AsyncHttpClientHttpUtil   : Get ERROR
+
+java.util.concurrent.ExecutionException: java.io.IOException: Remotely closed
+	at com.ning.http.client.providers.netty.future.NettyResponseFuture.abort(NettyResponseFuture.java:231) ~[async-http-client-1.9.40.jar:na]
+	at com.ning.http.client.providers.netty.request.NettyRequestSender.abort(NettyRequestSender.java:422) ~[async-http-client-1.9.40.jar:na]
+	at com.ning.http.client.providers.netty.request.NettyRequestSender.handleUnexpectedClosedChannel(NettyRequestSender.java:431) ~[async-http-client-1.9.40.jar:na]
+	at com.ning.http.client.providers.netty.handler.Processor.channelClosed(Processor.java:129) ~[async-http-client-1.9.40.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:88) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.channelClosed(SimpleChannelUpstreamHandler.java:225) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.channelClosed(HttpContentDecoder.java:147) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:88) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.cleanup(ReplayingDecoder.java:570) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.channelClosed(FrameDecoder.java:371) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpClientCodec$Decoder.channelClosed(HttpClientCodec.java:221) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:88) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpClientCodec.handleUpstream(HttpClientCodec.java:92) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.cleanup(FrameDecoder.java:493) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.channelClosed(FrameDecoder.java:371) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.handler.ssl.SslHandler.channelClosed(SslHandler.java:1668) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:88) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireChannelClosed(Channels.java:468) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.close(AbstractNioWorker.java:375) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:93) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) ~[netty-3.10.6.Final.jar:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) ~[netty-3.10.6.Final.jar:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.io.IOException: Remotely closed
+
+2021-03-17 23:42:53.491 ERROR 11368 --- [nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.util.Collection.toArray()" because "c" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.Collection.toArray()" because "c" is null
+	at java.base/java.util.ArrayList.addAll(ArrayList.java:670) ~[na:na]
+	at crawler.dgts.services.CrawlAuctionDataService.getAuctionBrief(CrawlAuctionDataService.java:70) ~[classes/:na]
+	at crawler.dgts.controllers.CrawlAuctionDataControllers.crawlAuctionBriefInfo(CrawlAuctionDataControllers.java:56) ~[classes/:na]
+	at crawler.dgts.controllers.CrawlAuctionDataControllers$$FastClassBySpringCGLIB$$17670648.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
+	at crawler.dgts.controllers.CrawlAuctionDataControllers$$EnhancerBySpringCGLIB$$7fd2a10e.crawlAuctionBriefInfo(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.1.jar:5.3.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.1.jar:5.3.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.1.jar:5.3.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.3.1.jar:5.3.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:807) ~[spring-webmvc-5.3.1.jar:5.3.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.1.jar:5.3.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.1.jar:5.3.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.1.jar:5.3.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.1.jar:5.3.1]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.1.jar:5.3.1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.39.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.1.jar:5.3.1]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.39.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.1.jar:5.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.1.jar:5.3.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+

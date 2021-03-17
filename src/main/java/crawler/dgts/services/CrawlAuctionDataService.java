@@ -2,6 +2,7 @@ package crawler.dgts.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,6 +60,11 @@ public class CrawlAuctionDataService extends BaseClientService {
 		Integer pageCount = result.getPageCount();
 		for(int p = 2; p <= pageCount; p++) {
 			aucBriefInfos.clear();
+			try {
+				TimeUnit.SECONDS.sleep(3);
+			} catch (InterruptedException e) {
+				log.info("CrawlAuctionDataService getAuctionBrief sleep error "+ e);
+			}
 			searchInput.setP(String.valueOf(p));
 			result = auctionService.getAuctionNoticeList(searchInput);
 			aucBriefInfos.addAll(objectMapper.convertValue(result.getItems(), new TypeReference<List<AuctionBriefInfoDto>>() { }));

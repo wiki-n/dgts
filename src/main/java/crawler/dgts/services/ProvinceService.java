@@ -29,7 +29,7 @@ public class ProvinceService {
 				provinceDtos.add(convertEntityToDto(province));
 			});
 		}
-		log.info("ProvinceService findAllProvince result: ", provinceDtos);
+		log.info("ProvinceService findAllProvince result: "+ provinceDtos);
 		return provinceDtos;
 	}
 

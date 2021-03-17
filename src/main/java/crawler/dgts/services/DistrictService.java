@@ -31,9 +31,9 @@ public class DistrictService {
 		});
 		try {
 			districtRepository.saveAll(districts);
-			log.info("DistrictService saveDistricts Succeed to save ", districts);
+			log.info("DistrictService saveDistricts Succeed to save "+ districts);
 		} catch (IllegalArgumentException e) {
-			log.info("DistrictService saveDistricts Failed to save ", districts);
+			log.info("DistrictService saveDistricts Failed to save "+ districts);
 			result = new DCMResponse(AppConstant.ERROR_CODE.INTERNAL_SERVER_ERROR);
 		}
 		return result;
