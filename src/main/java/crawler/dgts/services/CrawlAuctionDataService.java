@@ -55,13 +55,16 @@ public class CrawlAuctionDataService extends BaseClientService {
 			return aucBriefInfos;
 		}
 		aucBriefInfos.addAll(objectMapper.convertValue(result.getItems(), new TypeReference<List<AuctionBriefInfoDto>>() { }));
+		auctionBriefinfoService.saveAuctionBriefInfo(aucBriefInfos);
 		Integer pageCount = result.getPageCount();
 		for(int p = 2; p <= pageCount; p++) {
+			aucBriefInfos.clear();
 			searchInput.setP(String.valueOf(p));
 			result = auctionService.getAuctionNoticeList(searchInput);
 			aucBriefInfos.addAll(objectMapper.convertValue(result.getItems(), new TypeReference<List<AuctionBriefInfoDto>>() { }));
+			auctionBriefinfoService.saveAuctionBriefInfo(aucBriefInfos);
 		}
-		auctionBriefinfoService.saveAuctionBriefInfo(aucBriefInfos);
+//		auctionBriefinfoService.saveAuctionBriefInfo(aucBriefInfos);
 		return aucBriefInfos;
 	}
 
