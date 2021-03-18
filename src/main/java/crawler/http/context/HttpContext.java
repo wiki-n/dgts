@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import com.ning.http.client.AsyncHttpClient;
@@ -13,6 +14,7 @@ import com.ning.http.client.providers.netty.NettyAsyncHttpProvider;
 import com.ning.http.client.providers.netty.NettyAsyncHttpProviderConfig;
 
 @Service
+@Scope("prototype")
 public class HttpContext {
 	private int connectionTimeout = 30;
 	private int socketTimeout = 3;

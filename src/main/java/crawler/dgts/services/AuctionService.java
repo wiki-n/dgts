@@ -65,6 +65,7 @@ public class AuctionService extends BaseClientService {
 	// search Auction Brief as search condition
 	public AuctionSearchResult getAuctionNoticeList(AuctionSearchInput searchInput) {
 		AuctionSearchResult result = new AuctionSearchResult();
+		HttpContext oneTimeHttpContext = new HttpContext();
 		String url = String.format("%s/search/auction-notice", dgtsServicePortal);
 		Map<String, String> headers = new HashMap<>();
 		Map<String, String> requestParams = new HashMap<>();
@@ -79,15 +80,18 @@ public class AuctionService extends BaseClientService {
 		requestParams.put("startDate", searchInput.getStartDate());
 		requestParams.put("startPublishDate", searchInput.getStartPublishDate());
 		try {
-			HttpResponse response = httpContext.getHttpUtil().get(url, headers, requestParams);
+			HttpResponse response = oneTimeHttpContext.getHttpUtil().get(url, headers, requestParams);
 			if (response != null && response.isOk()) {
 				String responseString = new String(response.getBody(), "UTF8");
 				result = objectMapper.readValue(responseString, AuctionSearchResult.class);
-				log.info("DgtsService getAuctionNoticeList page "+ searchInput.getP());
+				if(result != null) {
+					log.info("DgtsService getAuctionNoticeList page "+ searchInput.getP()+"/ total "+ result.getPageCount());
+				}
 			}
 		} catch (IOException e) {
 			log.info("DgtsService getAuctionNoticeList failed "+ e);
 		}
+		oneTimeHttpContext.getHttpUtil().close();
 		return result;
 	}
 

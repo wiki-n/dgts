@@ -58,17 +58,23 @@ public class CrawlAuctionDataService extends BaseClientService {
 		aucBriefInfos.addAll(objectMapper.convertValue(result.getItems(), new TypeReference<List<AuctionBriefInfoDto>>() { }));
 		auctionBriefinfoService.saveAuctionBriefInfo(aucBriefInfos);
 		Integer pageCount = result.getPageCount();
-		for(int p = 2; p <= pageCount; p++) {
+		for(int p = Integer.valueOf(searchInput.getP()).intValue() + 1 ; p <= pageCount; p++) {
 			aucBriefInfos.clear();
 			try {
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(1);
 			} catch (InterruptedException e) {
 				log.info("CrawlAuctionDataService getAuctionBrief sleep error "+ e);
 			}
 			searchInput.setP(String.valueOf(p));
 			result = auctionService.getAuctionNoticeList(searchInput);
-			aucBriefInfos.addAll(objectMapper.convertValue(result.getItems(), new TypeReference<List<AuctionBriefInfoDto>>() { }));
-			auctionBriefinfoService.saveAuctionBriefInfo(aucBriefInfos);
+			if(result != null && result.getItems() != null) {
+				aucBriefInfos.addAll(objectMapper.convertValue(result.getItems(), new TypeReference<List<AuctionBriefInfoDto>>() { }));
+				auctionBriefinfoService.saveAuctionBriefInfo(aucBriefInfos);
+			} else {
+				p--; //retry
+			}
+			
+			
 		}
 //		auctionBriefinfoService.saveAuctionBriefInfo(aucBriefInfos);
 		return aucBriefInfos;

@@ -418,4 +418,9 @@ public class AsyncHttpClientHttpUtil implements HttpUtil {
 
 		return uploadHandle;
 	}
+
+	@Override
+	public void close() {
+		this.asyncHttpClient.close();
+	}
 }

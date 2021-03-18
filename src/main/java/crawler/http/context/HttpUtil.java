@@ -26,6 +26,8 @@ public interface HttpUtil {
 
 	UploadHandle upload(String url, File file, Map<String, String> headers, UploadListener uploadListener);
 
+	void close();
+
 	interface HttpOperationListener {
 		void onThrowable(Throwable throwable);
 
