@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -59,6 +60,9 @@ public class AuctionBriefinfoService extends BaseClientService {
 		if (dto == null) {
 			return entity;
 		}
+		if(StringUtils.isBlank(dto.getPropertyName())) {
+			dto.setPropertyName("Not Found");
+		}
 		entity = objectMapper.convertValue(dto, AuctionBriefInfo.class);
 		entity.setAuctionInfoId(dto.getId());
 		entity.setId(null);
@@ -81,8 +85,11 @@ public class AuctionBriefinfoService extends BaseClientService {
 		 * var name = convertStringToEnglish(propertyName); var redrUrl = preUrl +
 		 * "/thong-bao-cong-khai-viec-dau-gia/" + name + "-" + id + ".html";
 		 */
-		String link = VNCharacterUtils.removeAccent(dto.getPropertyName()).replaceAll("[^a-zA-Z0-9]", " ").replaceAll(" ", "-")
-				+ "-" + dto.getId() + ".html";
+		String link = "";
+		if(StringUtils.isNotBlank(dto.getPropertyName())) {
+			link = VNCharacterUtils.removeAccent(dto.getPropertyName()).replaceAll("[^a-zA-Z0-9]", " ").replaceAll(" ", "-")
+					+ "-" + dto.getId() + ".html";
+		}
 
 		return String.format("%s%s", dgtsDetailBasePath, link);
 	}
