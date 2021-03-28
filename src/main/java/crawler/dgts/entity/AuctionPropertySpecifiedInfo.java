@@ -40,7 +40,7 @@ public class AuctionPropertySpecifiedInfo {
 	@Column(name = "QUALITY")
 	private String propertyQuality;
 	@Column(name = "DEPOSIT")
-	private Integer deposit;
+	private Long deposit;
 	@Column(name = "DEPOSIT_UNIT")
 	private Integer depositUnit;
 	@Column(name = "TYPE_ID")
@@ -52,7 +52,7 @@ public class AuctionPropertySpecifiedInfo {
 	@Column(name = "PLACE")
 	private String propertyPlace;
 	@Column(name = "FILE_COST")
-	private Integer fileCost;
+	private Long fileCost;
 	@Column(name = "START_PRICE_STR")
 	private String strPropertyStartPrice;
 	@Column(name = "DEPOSIT_STR")

@@ -18,13 +18,13 @@ public class AuctionPropertySpecifiedInfoDto {
 	private String propertyStartPrice;
 	private String detail;
 	private String propertyQuality;
-	private Integer deposit;
+	private Long deposit;
 	private Integer depositUnit;
 	private Integer propertyTypeId;
 	private String propertyTypeName;
 	private Integer auctionInfoId;
 	private String propertyPlace;
-	private Integer fileCost;
+	private Long fileCost;
 	private String strPropertyStartPrice;
 	private String strDeposit;
 	private String strFileCost;

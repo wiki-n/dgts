@@ -93,4 +93,13 @@ public class AuctionBriefinfoService extends BaseClientService {
 
 		return String.format("%s%s", dgtsDetailBasePath, link);
 	}
+
+	public List<Integer> getUnprocessAuctionInfoIds(Integer beginIndex, Integer endIndex) {
+		return auctionBriefRepository.getUnprocessAuctionInfoIds(beginIndex, endIndex);
+	}
+
+	public void updateProcessStatus(List<Integer> auctionInfoIds) {
+		auctionBriefRepository.updateProcessStatus(auctionInfoIds);
+		
+	}
 }

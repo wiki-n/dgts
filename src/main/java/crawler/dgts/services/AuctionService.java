@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
+import crawler.dgts.dto.AuctionBriefInfoDto;
 import crawler.dgts.dto.AuctionPropertySpecifiedInfoDto;
 import crawler.dgts.dto.AuctionSearchInput;
 import crawler.dgts.dto.AuctionSearchResult;
@@ -57,7 +58,7 @@ public class AuctionService extends BaseClientService {
 				});
 			}
 		} catch (IOException e) {
-			log.info("DgtsService getDistrictByProvinceCode failed "+ e);
+			log.info("DgtsService getDistrictByProvinceCode failed " + e);
 		}
 		return districts;
 	}
@@ -84,41 +85,46 @@ public class AuctionService extends BaseClientService {
 			if (response != null && response.isOk()) {
 				String responseString = new String(response.getBody(), "UTF8");
 				result = objectMapper.readValue(responseString, AuctionSearchResult.class);
-				if(result != null) {
-					log.info("DgtsService getAuctionNoticeList page "+ searchInput.getP()+"/ total "+ result.getPageCount());
+				if (result != null) {
+					log.info("DgtsService getAuctionNoticeList page " + searchInput.getP() + "/ total "
+							+ result.getPageCount());
 				}
 			}
 		} catch (IOException e) {
-			log.info("DgtsService getAuctionNoticeList failed "+ e);
+			log.info("DgtsService getAuctionNoticeList failed " + e);
 		}
 		oneTimeHttpContext.getHttpUtil().close();
 		return result;
 	}
 
 	// get Auction Full Info by AuctionId
-	public AuctionPropertySpecifiedInfoDto getAuctionSpecifiedInfoByAuctionId(Integer aucId) {
-		AuctionPropertySpecifiedInfoDto auction = new AuctionPropertySpecifiedInfoDto();
+	public List<AuctionPropertySpecifiedInfoDto> getAuctionSpecifiedInfoByAuctionId(HttpContext oneTimeHttpContext, Integer aucId) {
+		List<AuctionPropertySpecifiedInfoDto> auctions = new ArrayList<>();
 		AuctionSearchResult result = new AuctionSearchResult();
+//		HttpContext oneTimeHttpContext = new HttpContext();
 		String url = String.format("%s/propertyInfo", dgtsServicePortal);
 		Map<String, String> headers = new HashMap<>();
 		Map<String, String> requestParams = new HashMap<>();
 		headers.put("Accept", "application/json, text/plain, */*");
 		requestParams.put("auctionInfoId", String.valueOf(aucId));
 		try {
-			HttpResponse response = httpContext.getHttpUtil().get(url, headers, requestParams);
+			HttpResponse response = oneTimeHttpContext.getHttpUtil().get(url, headers, requestParams);
 			if (response != null && response.isOk()) {
 				String responseString = new String(response.getBody(), "UTF8");
 				result = objectMapper.readValue(responseString, AuctionSearchResult.class);
 				if (!result.getItems().isEmpty()) {
-					auction = (AuctionPropertySpecifiedInfoDto) result.getItems().get(0);
-					log.info("DgtsService getAuctionSpecifiedInfoById aution info auction Id "+ auction);
+					auctions.addAll(objectMapper.convertValue(result.getItems(),
+							new TypeReference<List<AuctionPropertySpecifiedInfoDto>>() {
+							}));
+//					log.info("DgtsService getAuctionSpecifiedInfoById aution info auction Id "+ auctions);
 				} else {
-					log.info("DgtsService getAuctionSpecifiedInfoById empty info auction Id "+ aucId);
+					log.info("DgtsService getAuctionSpecifiedInfoById empty info auction Id " + aucId);
 				}
 			}
 		} catch (IOException e) {
-			log.info("DgtsService getDistrictByProvinceCode failed "+ e);
+			log.info("DgtsService getDistrictByProvinceCode failed " + e);
 		}
-		return auction;
+//		oneTimeHttpContext.getHttpUtil().close();
+		return auctions;
 	}
 }
