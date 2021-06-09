@@ -1,6 +1,6 @@
 package crawl.dgts;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +18,7 @@ public class ProviderServiceTest {
 	
 	@Test
 	public void testWordPressPublishMethod() {
+		System.out.print("teste----------------");
 		providerService.sendPost(providerService.createPostData(null, 2));
 	}
 }

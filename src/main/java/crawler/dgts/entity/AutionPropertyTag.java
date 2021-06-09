@@ -22,7 +22,7 @@ public class AutionPropertyTag {
 	@Id
 	@JsonIgnore
 	@Column(name = "UUID")
-    private Long id;
+    private byte[] id;
 
 	@Column(name = "AU_PROPERTY_INFO_ID")
 	private Integer auctionPropertyInfoId;

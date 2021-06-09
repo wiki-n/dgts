@@ -59,7 +59,7 @@ public class AuctionPropertyFullInfo {
 	private String propertyPlace;
 	@Column(name = "FILE_COST")
 	private Integer fileCost;
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "AU_PROPERTY_INFO_ID")
-	private List<AutionPropertyTag> tags;
+//	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+//	@JoinColumn(name = "AU_PROPERTY_INFO_ID")
+//	private List<AutionPropertyTag> tagInfo;
 }

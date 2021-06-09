@@ -23,7 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ProviderService extends BaseClientService {
 	@Autowired
 	private AuctionPropertyInfoService auctionPropertyInfoService;
-	@Value("classpath:data/templates/postContent.html")
+	@Value("classpath:templates/postContent.html")
 	Resource resourceFile;
 	@Autowired
 	private WordPressAPIService wpAPIService;
