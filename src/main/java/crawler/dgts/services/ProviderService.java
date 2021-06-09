@@ -45,7 +45,7 @@ public class ProviderService extends BaseClientService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		content.replace("${propertyName}", unProcessedProperties.get(0).getPropertyName())
+		content = content.replace("${propertyName}", unProcessedProperties.get(0).getPropertyName())
 				.replace("${startPrice}", unProcessedProperties.get(0).getPropertyStartPrice())
 				.replace("${deposit}", (unProcessedProperties.get(0).getDeposit()).toString())
 				.replace("${auctionTime}", unProcessedProperties.get(0).getAucTime().toString())
@@ -60,6 +60,7 @@ public class ProviderService extends BaseClientService {
 		}
 	
 	public void sendPost(List<WordpressPost> posts) {
+		// multi thread!!
 		posts.forEach(post ->{
 			wpAPIService.createPost(post);
 		});
