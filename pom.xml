@@ -34,6 +34,11 @@
 			<version>18.3.0.0</version>
 		</dependency>
 		<dependency>
+			<groupId>org.hobsoft.spring</groupId>
+			<artifactId>spring-rest-template-logger</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.9.2</version>
@@ -127,11 +132,24 @@
 			<artifactId>async-http-client</artifactId>
 			<version>1.9.40</version>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
 
 
 	</dependencies>
 	<build>
 		<finalName>${artifactId}</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
