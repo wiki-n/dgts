@@ -13,6 +13,6 @@ import crawler.dgts.entity.AuctionPropertySpecifiedInfo;
 public interface AuctionPropertySpecifiedRepository extends CrudRepository<AuctionPropertySpecifiedInfo, Integer> {
 	@Modifying
 	@Transactional
-	@Query(value = "update AUCTION_PROPERTY_SPECIFIED_INFO set process_status = 'OK' where AU_PROPERTY_INFO_ID in :auctionPropertyInfoIds", nativeQuery = true)
-	void updateProcessStatus(@Param("auctionPropertyInfoIds") List<Integer> auctionPropertyInfoIds);
+	@Query(value = "update auction_property_specified_info set process_status = :link where AU_PROPERTY_INFO_ID = :auctionPropertyInfoId", nativeQuery = true)
+	void updateProcessStatus(@Param("auctionPropertyInfoId") Integer auctionPropertyInfoId, @Param("link") String link);
 }

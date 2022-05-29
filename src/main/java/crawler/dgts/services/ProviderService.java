@@ -5,7 +5,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,14 +35,14 @@ public class ProviderService extends BaseClientService {
 	@Autowired
 	private WordPressAPIService wpAPIService;
 	//create wordpress post. title, content, tags, category
-	public List<WordpressPost> createPostData(String category, Integer max){
-		List<WordpressPost> posts = new ArrayList<>();
+	public Map<Integer,WordpressPost> createPostData(String category, Integer max){
+		Map<Integer,WordpressPost> posts = new HashMap<>();
 		List<AuctionPropertyFullInfoDto> unProcessedProperties = new ArrayList<>();
 		unProcessedProperties = auctionPropertyInfoService.getUnprocessAuctionProperty(max);
 		if(CollectionUtils.isEmpty(unProcessedProperties)) {
 			return posts;
 		}
-		String content = null;
+		String content = "";
 		try {
 			content = new BufferedReader(
 				      new InputStreamReader(resourceFile.getInputStream(), StandardCharsets.UTF_8))
@@ -45,24 +52,58 @@ public class ProviderService extends BaseClientService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		content = content.replace("${propertyName}", unProcessedProperties.get(0).getPropertyName())
-				.replace("${startPrice}", unProcessedProperties.get(0).getPropertyStartPrice())
-				.replace("${deposit}", (unProcessedProperties.get(0).getDeposit()).toString())
-				.replace("${auctionTime}", unProcessedProperties.get(0).getAucTime().toString())
-				.replace("${regTime}", unProcessedProperties.get(0).getAucRegTimeStart().toString());
-		WordpressPost post = new WordpressPost();
-		post.setTittle(unProcessedProperties.get(0).getPropertyName());
-		post.setContent(content);
-		// create, get tags, categoried first
-//		post.setTags(unProcessedProperties.get(0).getTags());
-		posts.add(post);
+		if(CollectionUtils.isEmpty(unProcessedProperties)) {
+			return posts;
+		}
+		
+		for (AuctionPropertyFullInfoDto property : unProcessedProperties) {
+			WordpressPost post = new WordpressPost();
+			post.setTittle(property.getPropertyName());
+			post.setContent(content.replace("${propertyName}", property.getPropertyName())
+					.replace("${startPrice}", property.getPropertyStartPrice())
+					.replace("${deposit}", property.toString()).replace("${auctionTime}", property.toString())
+					.replace("${regTime}", property.toString()));
+			post.setExcerpt(""); //TODO
+			// create, get tags, categoried first
+//			post.setTags(unProcessedProperties.get(0).getTags());
+			posts.put(property.getAuctionPropertyInfoId(), post);
+		};
+
 		return posts;
 		}
 	
-	public void sendPost(List<WordpressPost> posts) {
+	public Map<Integer,String> sendPost(Map<Integer,WordpressPost> posts) {
+		Map<Integer,String> resultLinkMap = new HashMap<>();
 		// multi thread!!
-		posts.forEach(post ->{
-			wpAPIService.createPost(post);
+//		Collectors.toList(posts.values).(post ->{
+//			wpAPIService.createPost(post);
+//		});
+		ExecutorService executor = Executors.newFixedThreadPool(4);
+		List<Callable<Map<Integer,String>>> callableTasks = new ArrayList<>();
+		posts.forEach((auctionPropertyInfoId,post)->{
+//			resultLinkMap.put(auctionPropertyInfoId, null);
+			Callable<Map<Integer,String>> callableTask = () ->{
+				return wpAPIService.createPost(auctionPropertyInfoId, post);
+			};
+			callableTasks.add(callableTask);
 		});
+		try {
+			List<Future<Map<Integer,String>>> responses = executor.invokeAll(callableTasks);
+			responses.forEach(response ->{
+				try {
+					resultLinkMap.putAll(response.get());
+				} catch (InterruptedException e) {
+					log.info("ProviderService sendPost error "+ e);
+					Thread.currentThread().interrupt();
+				} catch (ExecutionException e) {
+					// TODO Auto-generated catch block
+					log.info("ProviderService sendPost error "+ e);
+				}
+			});
+		} catch (InterruptedException e) {
+			log.info("ProviderService sendPost error "+ e);
+			Thread.currentThread().interrupt();
+		}
+		return resultLinkMap;
 	}
 }

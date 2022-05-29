@@ -16,5 +16,6 @@ import lombok.Setter;
 public class WordpressPost {
 	private String tittle;
 	private String content;
+	private String excerpt;
 	private List<String> tags;
 }

@@ -3,8 +3,12 @@ package crawler.dgts.services;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLDecoder;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.hobsoft.spring.resttemplatelogger.LoggingCustomizer;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
@@ -52,7 +56,9 @@ public class WordPressAPIService extends BaseClientService {
 	 * =test%20content&tags=1&status=publish' -H 'Authorization: Basic
 	 * aG9hbmdfZGV2Ok1GaVQgd25LbCBZVE02IGJOQU4gaXVIQyBWSndQ'
 	 */
-	public void createPost(WordpressPost post) {
+	public Map<Integer,String> createPost(Integer aucPropertyId, WordpressPost post) {
+		Map<Integer,String> result = new HashMap<>();
+		String link = null;
 		RestTemplate restTemplate = getRestTemplate();
 		
 		UriComponents  builder = UriComponentsBuilder.fromHttpUrl(wpServiceUrl).path(pathPost)
@@ -72,10 +78,20 @@ public class WordPressAPIService extends BaseClientService {
 			        HttpMethod.POST, 
 			        entity, 
 			        String.class);
+			
+			JSONObject json;
+			try {
+				json = new JSONObject(response.getBody());
+				link = json.getString("link");
+			} catch (JSONException e) {
+				log.error("Call API " + endpoint + " FAIL. " + e);
+			}
 		} catch (HttpClientErrorException e) {
 			log.error("Call API " + endpoint + " FAIL. " + e.getResponseBodyAsString());
 			throw new RuntimeException("Call API " + endpoint + " FAIL. " + e.getResponseBodyAsString());
 		}
+		result.put(aucPropertyId, link);
+		return result;
 	}
 
 	public void createTags() {

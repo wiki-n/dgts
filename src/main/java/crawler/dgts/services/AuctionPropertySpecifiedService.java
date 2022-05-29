@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import crawler.dgts.dto.AuctionPropertySpecifiedInfoDto;
@@ -58,5 +59,8 @@ public class AuctionPropertySpecifiedService extends BaseClientService {
 			response = new DCMResponse(AppConstant.ERROR_CODE.INTERNAL_SERVER_ERROR);
 		}
 		return response;
+	}
+	public void updateProcessStatus(Integer auctionPropertyInfoId, String link) {
+		auctionPropertySpecifiedRepository.updateProcessStatus(auctionPropertyInfoId, link);
 	}
 }
